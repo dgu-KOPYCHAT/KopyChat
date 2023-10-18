@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const InfoBar = styled.div`
 	width: 100vw;
-	height: 4.5vh; /* 4.5vh = 48.6px */
+	height: 5vh; /* 5vh = 54px */
 	/* background-color: #2f2f2f; */
 	/* background-color: #1f1f1f; */
 	/* background-color: #3a4a6c; */
@@ -39,7 +39,7 @@ export const QuizTitleText = styled.span`
 
 export const QuizPage = styled.div`
 	width: 100vw;
-	height: 88vh; /* 88vh = 950.4px */
+	height: 85vh; /* 85vh = 918px */
 	display: flex;
 	justify-content: left;
 	align-items: center;

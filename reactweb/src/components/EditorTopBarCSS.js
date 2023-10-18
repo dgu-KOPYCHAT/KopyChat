@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const TopBar = styled.div`
 	width: 100vw;
-	height: 7.5vh; /* 7.5vh = 81px */
+	height: 10vh; /* 10vh = 108px */
 	display: flex;
 	align-items: center;
 	/*background-color: #0f0f1f;*/
@@ -35,8 +35,8 @@ export const Logo = styled.div`
 `;
 
 export const LogoImage = styled.img`
-	width: min(3vw, 5vh); /* 3vw = 57.6px, 5vh = 54px */
-	height: min(3vw, 5vh);
+	width: min(4vw, 7vh); /* 4vw = 76.8px, 7vh = 75.6px */
+	height: min(4vw, 7vh);
 	margin: 0px 0px 5px 10px;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
@@ -68,8 +68,8 @@ export const MenuText = styled.h1`
 `;
 
 export const SearchIconImage = styled.img`
-	width: 30px;
-	height: 30px;
+	width: min(1.5vw, 3vh); /* 1.5vw = 28.8px, 3vh = 32.4px */
+	height: min(1.5vw, 3vh);
 	margin: 0px;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
@@ -78,7 +78,7 @@ export const SearchIconImage = styled.img`
 export const LoginMenu = styled.div`
 	width: 20vw; /* 20vw = 384px */
 	height: 100%;
-	margin-right: 5vw; /* 5vw = 96px */
+	margin-right: 2vw; /* 2vw = 38.4px */
 	display: flex;
 	justify-content: center;
 	align-items: center;

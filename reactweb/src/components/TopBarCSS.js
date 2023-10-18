@@ -2,21 +2,21 @@ import styled, { css } from "styled-components";
 
 export const TopBar = styled.div`
 	width: 100vw;
-	height: 80px;
+	height: 10vh; /* 10vh = 108px */
 	display: flex;
 	align-items: center;
 `;
 
 export const LeftSide = styled.div`
 	width: 70%;
-	height: 120px;
+	height: 100%;
 	display: flex;
 	align-items: center;
 `;
 
 export const RightSide = styled.div`
 	width: 30%;
-	height: 120px;
+	height: 100%;
 	display: flex;
 	flex-direction: row-reverse;
 	align-items: center;
@@ -42,7 +42,7 @@ export const LogoImage = styled.img`
 
 export const LogoText = styled.h1`
 	margin: 0px 10px;
-	color: black;
+	color: white;
 	font-size: var(--font-size-lg);
 	font-family: var(--font-Maplestory-Bold);
 	-webkit-user-drag: none;
@@ -60,14 +60,14 @@ export const TopMenu = styled.div`
 export const MenuText = styled.h1`
 	font-size: var(--font-size-md);
 	font-family: var(--font-Maplestory-Bold);
-	color: black;
+	color: white;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
 `;
 
 export const SearchIconImage = styled.img`
-	width: 30px;
-	height: 30px;
+	width: min(1.5vw, 3vh); /* 1.5vw = 28.8px, 3vh = 32.4px */
+	height: min(1.5vw, 3vh);
 	margin: 0px;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
@@ -76,7 +76,7 @@ export const SearchIconImage = styled.img`
 export const LoginMenu = styled.div`
 	width: 20vw; /* 20vw = 384px */
 	height: 100%;
-	margin-right: 5vw; /* 5vw = 96px */
+	margin-right: 2vw; /* 2vw = 38.4px */
 	display: flex;
 	justify-content: center;
 	align-items: center;

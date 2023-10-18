@@ -6,7 +6,9 @@ import TopBar from "./TopBar";
 const MainPage = () => {
 	return (
 		<div>
-			<TopBar />
+			<c.Entire>
+				<TopBar />
+			</c.Entire>
 		</div>
 	);
 };

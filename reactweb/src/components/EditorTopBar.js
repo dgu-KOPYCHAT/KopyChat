@@ -20,9 +20,11 @@ const EditorTopBar = () => {
 							<c.MenuText>문제</c.MenuText>
 						</c.TopMenu>
 					</Link>
-					<c.TopMenu>
-						<c.MenuText>문제집</c.MenuText>
-					</c.TopMenu>
+					<Link to="/quizlist" style={{ textDecoration: "none" }}>
+						<c.TopMenu>
+							<c.MenuText>문제집</c.MenuText>
+						</c.TopMenu>
+					</Link>
 					<c.TopMenu>
 						<c.MenuText>그룹</c.MenuText>
 					</c.TopMenu>

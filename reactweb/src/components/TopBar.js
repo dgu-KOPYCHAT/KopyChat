@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as c from "./TopBarCSS.js";
 import LogoImage from "../images/kopychat.png";
-import SearchIcon from "../images/search_icon.png";
+import SearchIcon from "../images/search_icon_gray.png";
 
 const TopBar = () => {
 	return (
@@ -20,9 +20,11 @@ const TopBar = () => {
 							<c.MenuText>문제</c.MenuText>
 						</c.TopMenu>
 					</Link>
-					<c.TopMenu>
-						<c.MenuText>문제집</c.MenuText>
-					</c.TopMenu>
+					<Link to="/quizlist" style={{ textDecoration: "none" }}>
+						<c.TopMenu>
+							<c.MenuText>문제집</c.MenuText>
+						</c.TopMenu>
+					</Link>
 					<c.TopMenu>
 						<c.MenuText>그룹</c.MenuText>
 					</c.TopMenu>

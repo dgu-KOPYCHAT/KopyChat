@@ -1,45 +1,8 @@
 import styled, { css } from "styled-components";
 
-export const InfoBar = styled.div`
-	width: 100vw;
-	height: 5vh; /* 5vh = 54px */
-	/* background-color: #2f2f2f; */
-	/* background-color: #1f1f1f; */
-	/* background-color: #3a4a6c; */
-	background-color: #222333;
-	display: flex;
-	justify-content: left;
-	align-items: center;
-`;
-
-export const QuizTitle = styled.div`
-	width: 40vw;
-	height: 100%;
-	display: flex;
-	justify-content: left;
-	align-items: center;
-`;
-
-export const QuizDifficultyImage = styled.img`
-	width: min(2vw, 3.5vh); /* 2vw = 38.4px, 3.5vh = 37.8px */
-	height: min(2vw, 3.5vh);
-	margin-left: 2vw; /* 2vw = 38.4px */
-	margin-top: 3px;
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
-`;
-
-export const QuizTitleText = styled.span`
-	width: 80%;
-	margin-left: 5px;
-	color: white;
-	font-size: var(--font-size-sm);
-	font-family: var(--font-Default-Light);
-`;
-
 export const QuizPage = styled.div`
 	width: 100vw;
-	height: 85vh; /* 85vh = 918px */
+	height: 90vh; /* 90vh = 972px */
 	display: flex;
 	justify-content: left;
 	align-items: center;
@@ -50,17 +13,116 @@ export const QuizInfo = styled.div`
 	height: calc(100% - 4vh);
 	padding: 2vh 1vw 2vh 2vw;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: #222333;
 `;
 
-export const QuizText = styled.p`
-	width: 90%;
-	height: 95%;
-	font-family: var(--font-Default-Light);
-	font-size: var(--font-size-sm);
+export const QuizTitle = styled.div`
+	width: auto;
+	height: 100%;
+	margin-right: 1vw;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+`;
+
+export const QuizDifficultyImage = styled.img`
+	width: min(3vw, 5vh); /* 3vw = 57.6px, 5vh = 54px */
+	height: min(3vw, 5vh);
+	margin-left: -0.5vw;
+	margin-right: -0.1vw;
+	margin-top: 3px;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+`;
+
+export const QuizTitleText = styled.p`
+	width: auto;
 	color: white;
+	font-size: var(--font-size-smmd);
+	font-family: var(--font-Default-Light);
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+`;
+
+export const TitleBar = styled.div`
+	width: 100%;
+	height: 4%;
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+`;
+
+export const InfoBar = styled.div`
+	width: 100%;
+	height: 6%;
+	margin-top: 0.5vw;
+	margin-bottom: -0.5vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+`;
+
+export const InfoBarLeft = styled.div`
+	width: auto;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+`;
+
+export const InfoBarRight = styled.div`
+	width: auto;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	align-items: center;
+`;
+
+export const Info = styled.div`
+	width: auto;
+	margin-right: 1vw;
+	margin-right: ${(props) => props.marginRight};
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+`;
+
+export const InfoText = styled.h1`
+	width: auto;
+	margin: 0px 5px;
+	margin-left: ${(props) => props.marginLeft};
+	font-size: var(--font-size-smmd);
+	font-family: var(--font-Default-Light);
+	color: white;
+	white-space: nowrap;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+`;
+
+export const Image = styled.img`
+	width: min(1vw, 2vh); /* 1vw = 19.2px, 2vh = 21.6px */
+	height: min(1vw, 2vh);
+	margin-right: 0.1vw; /* 0.1vw = 0.192px */
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+`;
+
+export const HrLine = styled.hr`
+	width: 96%;
+	height: 0.2px;
+	text-align: left;
+	margin-left: 0;
+	border: 0;
+	background-color: #7f7f7f3f;
 `;
 
 export const QuizEditor = styled.div`

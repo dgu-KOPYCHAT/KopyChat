@@ -76,6 +76,11 @@ code {
 		0.9vw,
 		1.35rem
 	); /* 0.45rem = 7.2px, 0.9vw = 17.28px (1920x1080), 1.35rem = 21.6px */
+	--font-size-xssm: clamp(
+		0.375rem,
+		0.75vw,
+		1.125rem
+	); /* 0.375rem = 6px, 0.75vw = 14.4px (1920x1080), 1.125rem = 18px */
 	--font-size-xs: clamp(
 		0.3rem,
 		0.6vw,

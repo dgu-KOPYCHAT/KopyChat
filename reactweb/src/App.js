@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MainPage from "./components/MainPage";
-import EditorPage from "./components/EditorPage";
-import QuizListPage from "./components/QuizListPage";
+import MainPage from "./pages/MainPage";
+import EditorPage from "./pages/EditorPage";
+import QuizListPage from "./pages/QuizListPage";
+import QuizPage from "./pages/QuizPage";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 					<Route path="/" element={<MainPage />} />
 					<Route path="/editor" element={<EditorPage />} />
 					<Route path="/quizlist" element={<QuizListPage />} />
+					<Route path="/quiz" element={<QuizPage />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

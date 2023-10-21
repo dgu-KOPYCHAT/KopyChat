@@ -23,29 +23,54 @@ code {
 }
 
 :root {
-	--font-Maplestory-Light: "Maplestory Light", sans-serif;
+	--font-Default-Light: "Maplestory Light", sans-serif;
 }
 
 :root {
-	--font-Maplestory-Bold: "Maplestory Bold", sans-serif;
+	--font-Default-Bold: "Maplestory Bold", sans-serif;
 }
 
 :root {
+	--font-size-xxxl: clamp(
+		1.25rem,
+		2.5vw,
+		3.75rem
+	); /* 1.25rem = 20px, 2.5vw = 48px (1920x1080), 3.75rem = 60px */
+	--font-size-xxl: clamp(
+		1.125rem,
+		2.25vw,
+		3.375rem
+	); /* 1.125rem = 18px, 2.25vw = 43.2px (1920x1080), 3.375rem = 54px */
 	--font-size-xl: clamp(
 		1rem,
 		2vw,
 		3rem
 	); /* 1rem = 16px, 2vw = 38.4px (1920x1080), 3rem = 48px */
+	--font-size-lgxl: clamp(
+		0.875rem,
+		1.75vw,
+		2.625rem
+	); /* 0.875rem = 14px, 1.75vw = 33.6px (1920x1080), 2.625rem = 42px */
 	--font-size-lg: clamp(
 		0.75rem,
 		1.5vw,
 		2.25rem
 	); /* 0.75rem = 12px, 1.5vw = 28.8px (1920x1080), 2.25rem = 36px */
+	--font-size-mdlg: clamp(
+		0.675rem,
+		1.35vw,
+		2.025rem
+	); /* 0.675rem = 10.8px, 1.35vw = 25.92px (1920x1080), 2.025rem = 32.4px */
 	--font-size-md: clamp(
 		0.6rem,
 		1.2vw,
 		1.8rem
 	); /* 0.6rem = 9.6px, 1.2vw = 23.04px (1920x1080), 1.8rem = 28.8px */
+	--font-size-smmd: clamp(
+		0.525rem,
+		1.05vw,
+		1.575rem
+	); /* 0.525rem = 8.4px, 1.05vw = 20.16px (1920x1080), 1.575rem = 25.2px */
 	--font-size-sm: clamp(
 		0.45rem,
 		0.9vw,

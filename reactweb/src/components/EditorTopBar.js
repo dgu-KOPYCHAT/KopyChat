@@ -15,7 +15,7 @@ const EditorTopBar = () => {
 							<c.LogoText>KOPYCHAT</c.LogoText>
 						</c.Logo>
 					</Link>
-					<Link to="/editor" style={{ textDecoration: "none" }}>
+					<Link to="/quiz" style={{ textDecoration: "none" }}>
 						<c.TopMenu>
 							<c.MenuText>문제</c.MenuText>
 						</c.TopMenu>
@@ -23,6 +23,11 @@ const EditorTopBar = () => {
 					<Link to="/quizlist" style={{ textDecoration: "none" }}>
 						<c.TopMenu>
 							<c.MenuText>문제집</c.MenuText>
+						</c.TopMenu>
+					</Link>
+					<Link to="/editor" style={{ textDecoration: "none" }}>
+						<c.TopMenu>
+							<c.MenuText>에디터</c.MenuText>
 						</c.TopMenu>
 					</Link>
 					<c.TopMenu>

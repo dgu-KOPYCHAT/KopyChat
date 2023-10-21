@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import * as c from "./QuizListPageCSS.js";
-import TopBar from "./TopBar";
-import QuizCard from "./QuizCard.js";
+import TopBar from "../components/TopBar.js";
+import QuizCard from "../components/QuizCard.js";
+import Post from "../components/Post.js";
 import DifficultyImage from "../images/Difficulty/prototype.png";
 
 const QuizListPage = () => {
@@ -18,7 +19,6 @@ const QuizListPage = () => {
 		<div>
 			<c.Entire>
 				<TopBar />
-				<c.HrLine />
 				<c.Content>
 					<c.PageTitle>
 						<c.DifficultyImg src={DifficultyImage} />
@@ -38,6 +38,7 @@ const QuizListPage = () => {
 							<c.SortText>푼 사람 수</c.SortText>
 						</c.SortBtn>
 					</c.SortBar>
+					<c.HrLine />
 					<c.QuizListTopBar>
 						<c.IDText>#</c.IDText>
 						<c.QuizTitleText>제목</c.QuizTitleText>

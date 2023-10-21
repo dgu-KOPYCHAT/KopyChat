@@ -45,7 +45,7 @@ export const LogoImage = styled.img`
 export const LogoText = styled.h1`
 	margin: 0px 10px;
 	font-size: var(--font-size-lg);
-	font-family: var(--font-Maplestory-Bold);
+	font-family: var(--font-Default-Bold);
 	color: #bfbfbf;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
@@ -61,7 +61,7 @@ export const TopMenu = styled.div`
 
 export const MenuText = styled.h1`
 	font-size: var(--font-size-md);
-	font-family: var(--font-Maplestory-Bold);
+	font-family: var(--font-Default-Bold);
 	color: #bfbfbf;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;

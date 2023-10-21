@@ -26,8 +26,8 @@ export const Content = styled.div`
 
 export const PageTitle = styled.div`
 	width: 100%;
-	height: 15%;
-	margin-top: 0%;
+	height: 20%;
+	margin-top: 1%;
 	margin-bottom: 0%;
 	display: flex;
 	flex-direction: row;
@@ -36,15 +36,15 @@ export const PageTitle = styled.div`
 `;
 
 export const DifficultyImg = styled.img`
-	width: min(4vw, 7vh); /* 4vw = 76.8px, 7vh = 75.6px */
-	height: min(4vw, 7vh);
+	width: min(5vw, 9vh); /* 5vw = 96px, 9vh = 97.2px */
+	height: min(5vw, 9vh);
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
 `;
 
 export const PageTitleText = styled.h1`
-	font-size: var(--font-size-lg);
-	font-family: var(--font-Maplestory-Bold);
+	font-size: var(--font-size-xl);
+	font-family: var(--font-Default-Bold);
 	color: white;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
@@ -52,8 +52,8 @@ export const PageTitleText = styled.h1`
 
 export const SortBar = styled.div`
 	width: 100%;
-	height: 5%;
-	margin-bottom: 2%;
+	height: 4%;
+	margin-top: 1%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -61,7 +61,7 @@ export const SortBar = styled.div`
 
 export const SortBtn = styled.div`
 	width: auto;
-	height: 80%;
+	height: 90%;
 	margin: 0px 0.75%;
 	padding: 0px 20px;
 	display: flex;
@@ -88,7 +88,7 @@ export const SortDiv = styled.div`
 export const SortText = styled.p`
 	color: white;
 	font-size: var(--font-size-sm);
-	font-family: var(--font-Maplestory-Light);
+	font-family: var(--font-Default-Light);
 	text-align: center;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
@@ -97,6 +97,7 @@ export const SortText = styled.p`
 export const QuizListTopBar = styled.div`
 	width: 95%;
 	height: 5%;
+	margin-top: 2%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -107,7 +108,7 @@ export const IDText = styled.span`
 	width: 20%;
 	color: white;
 	font-size: var(--font-size-sm);
-	font-family: var(--font-Maplestory-Light);
+	font-family: var(--font-Default-Light);
 	text-align: center;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
@@ -117,7 +118,7 @@ export const QuizTitleText = styled.span`
 	width: 60%;
 	color: white;
 	font-size: var(--font-size-sm);
-	font-family: var(--font-Maplestory-Light);
+	font-family: var(--font-Default-Light);
 	text-align: center;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
@@ -127,7 +128,7 @@ export const SolvedAmountText = styled.span`
 	width: 20%;
 	color: white;
 	font-size: var(--font-size-sm);
-	font-family: var(--font-Maplestory-Light);
+	font-family: var(--font-Default-Light);
 	text-align: center;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;

@@ -44,7 +44,7 @@ export const LogoText = styled.h1`
 	margin: 0px 10px;
 	color: white;
 	font-size: var(--font-size-lg);
-	font-family: var(--font-Maplestory-Bold);
+	font-family: var(--font-Default-Bold);
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
 `;
@@ -59,7 +59,7 @@ export const TopMenu = styled.div`
 
 export const MenuText = styled.h1`
 	font-size: var(--font-size-md);
-	font-family: var(--font-Maplestory-Bold);
+	font-family: var(--font-Default-Bold);
 	color: white;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
@@ -80,4 +80,12 @@ export const LoginMenu = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+`;
+
+export const HrLine = styled.hr`
+	width: 100%;
+	height: 0.2px;
+	margin-top: -0.2px;
+	border: 0;
+	background-color: #7f7f7f3f;
 `;

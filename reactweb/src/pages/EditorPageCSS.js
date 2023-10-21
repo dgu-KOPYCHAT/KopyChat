@@ -34,7 +34,7 @@ export const QuizTitleText = styled.span`
 	margin-left: 5px;
 	color: white;
 	font-size: var(--font-size-sm);
-	font-family: var(--font-Maplestory-Light);
+	font-family: var(--font-Default-Light);
 `;
 
 export const QuizPage = styled.div`
@@ -46,8 +46,9 @@ export const QuizPage = styled.div`
 `;
 
 export const QuizInfo = styled.div`
-	width: 35%;
-	height: 100%;
+	width: calc(35% - 3vw);
+	height: calc(100% - 4vh);
+	padding: 2vh 1vw 2vh 2vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -57,7 +58,7 @@ export const QuizInfo = styled.div`
 export const QuizText = styled.p`
 	width: 90%;
 	height: 95%;
-	font-family: var(--font-Maplestory-Light);
+	font-family: var(--font-Default-Light);
 	font-size: var(--font-size-sm);
 	color: white;
 `;

@@ -23,7 +23,7 @@ export const HrLine = styled.hr`
 export const ParagraphTitleDiv = styled.div`
 	width: 100%;
 	height: min(2vw, 3.5vh); /* 2vw = 39.2px, 3.5vh = 37.8px */
-	margin: 1vh 0; /* 1vh = 10.8px */
+	margin: 0.5vh 0 0.5vh 0; /* 0.5vh = 5.4px */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -56,7 +56,7 @@ export const ParagraphContentDiv = styled.div`
 export const ParagraphContentText = styled.p`
 	width: 100%;
 	height: auto;
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-smmd);
 	font-family: var(--font-Default-Light);
 	line-height: 1.5;
 	display: inline-block;

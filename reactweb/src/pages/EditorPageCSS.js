@@ -98,9 +98,9 @@ export const Info = styled.div`
 
 export const InfoText = styled.h1`
 	width: auto;
-	margin: 0px 5px;
+	margin: 0px 7px;
 	margin-left: ${(props) => props.marginLeft};
-	font-size: var(--font-size-smmd);
+	font-size: var(--font-size-md);
 	font-family: var(--font-Default-Light);
 	color: white;
 	white-space: nowrap;
@@ -111,7 +111,7 @@ export const InfoText = styled.h1`
 export const Image = styled.img`
 	width: min(1vw, 2vh); /* 1vw = 19.2px, 2vh = 21.6px */
 	height: min(1vw, 2vh);
-	margin-right: 0.1vw; /* 0.1vw = 0.192px */
+	margin-right: 0.1vw; /* 0.1vw = 1.92px */
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
 `;

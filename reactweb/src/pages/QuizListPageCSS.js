@@ -87,7 +87,7 @@ export const SortDiv = styled.div`
 
 export const SortText = styled.p`
 	color: white;
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-smmd);
 	font-family: var(--font-Default-Light);
 	text-align: center;
 	-webkit-user-drag: none;
@@ -107,7 +107,7 @@ export const QuizListTopBar = styled.div`
 export const IDText = styled.span`
 	width: 20%;
 	color: white;
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-smmd);
 	font-family: var(--font-Default-Light);
 	text-align: center;
 	-webkit-user-drag: none;
@@ -117,7 +117,7 @@ export const IDText = styled.span`
 export const QuizTitleText = styled.span`
 	width: 60%;
 	color: white;
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-smmd);
 	font-family: var(--font-Default-Light);
 	text-align: center;
 	-webkit-user-drag: none;
@@ -127,7 +127,7 @@ export const QuizTitleText = styled.span`
 export const SolvedAmountText = styled.span`
 	width: 20%;
 	color: white;
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-smmd);
 	font-family: var(--font-Default-Light);
 	text-align: center;
 	-webkit-user-drag: none;

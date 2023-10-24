@@ -170,7 +170,7 @@ export const Info = styled.div`
 export const InfoNameText = styled.h1`
 	width: auto;
 	margin: 0px 7.5px;
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-smmd);
 	font-family: var(--font-Default-Bold);
 	color: white;
 	white-space: nowrap;
@@ -182,7 +182,7 @@ export const InfoText = styled.h1`
 	width: auto;
 	margin: 0px 7.5px;
 	margin-left: ${(props) => props.marginLeft};
-	font-size: var(--font-size-mdlg);
+	font-size: var(--font-size-lg);
 	font-family: var(--font-Default-Bold);
 	color: white;
 	white-space: nowrap;

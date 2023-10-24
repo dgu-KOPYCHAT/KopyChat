@@ -30,7 +30,7 @@ const IDText = styled.span`
 	width: 80%;
 	margin-left: 5px;
 	color: white;
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-smmd);
 	font-family: var(--font-Default-Light);
 `;
 
@@ -38,14 +38,14 @@ const QuizTitleText = styled.span`
 	width: 60%;
 	margin-left: 5px;
 	color: white;
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-smmd);
 	font-family: var(--font-Default-Light);
 `;
 
 const SolvedAmountText = styled.span`
 	width: 20%;
 	color: white;
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-smmd);
 	font-family: var(--font-Default-Light);
 	text-align: right;
 `;

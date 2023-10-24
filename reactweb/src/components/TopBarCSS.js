@@ -43,7 +43,7 @@ export const LogoImage = styled.img`
 export const LogoText = styled.h1`
 	margin: 0px 10px;
 	color: white;
-	font-size: var(--font-size-lg);
+	font-size: var(--font-size-lgxl);
 	font-family: var(--font-Default-Bold);
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
@@ -58,7 +58,7 @@ export const TopMenu = styled.div`
 `;
 
 export const MenuText = styled.h1`
-	font-size: var(--font-size-md);
+	font-size: var(--font-size-mdlg);
 	font-family: var(--font-Default-Bold);
 	color: white;
 	-webkit-user-drag: none;

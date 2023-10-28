@@ -88,7 +88,7 @@ export const InfoBarRight = styled.div`
 export const Info = styled.div`
 	width: auto;
 	margin-right: 1vw;
-	margin-right: ${(props) => props.marginRight};
+	margin-right: ${(props) => props.marginR};
 	height: 100%;
 	display: flex;
 	flex-direction: row;
@@ -99,7 +99,7 @@ export const Info = styled.div`
 export const InfoText = styled.h1`
 	width: auto;
 	margin: 0px 7px;
-	margin-left: ${(props) => props.marginLeft};
+	margin-left: ${(props) => props.marginL};
 	font-size: var(--font-size-md);
 	font-family: var(--font-Default-Light);
 	color: white;
@@ -128,4 +128,18 @@ export const HrLine = styled.hr`
 export const QuizEditor = styled.div`
 	width: 65%;
 	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`;
+
+export const EditorSetting = styled.div`
+	width: 100%;
+	height: 6%;
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	background-color: #222333;
 `;

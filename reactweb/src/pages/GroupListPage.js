@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as c from "./QuizListPageCSS.js";
+import * as c from "./GroupListPageCSS.js";
 import TopBar from "../components/TopBar.js";
 import QuizCard from "../components/QuizCard.js";
 import Post from "../components/Post.js";
 import DifficultyImage from "../images/Difficulty/prototype.png";
 
-const QuizListPage = () => {
+const GroupListPage = () => {
 	function QuizList() {
 		let result = [];
-		for (let i = 0; i < 25; i++) {
+		for (let i = 0; i < 5; i++) {
 			result.push(<QuizCard />);
 		}
 		return result;
@@ -21,8 +21,7 @@ const QuizListPage = () => {
 				<TopBar />
 				<c.Content>
 					<c.PageTitle>
-						<c.DifficultyImg src={DifficultyImage} />
-						<c.PageTitleText>문제 목록</c.PageTitleText>
+						<c.PageTitleText>그룹 목록</c.PageTitleText>
 					</c.PageTitle>
 					<c.SortBar>
 						<c.SortDiv>
@@ -44,11 +43,11 @@ const QuizListPage = () => {
 						<c.QuizTitleText>제목</c.QuizTitleText>
 						<c.SolvedAmountText>푼 사람 수</c.SolvedAmountText>
 					</c.QuizListTopBar>
-					<c.QuizContent>{QuizList()}</c.QuizContent>
+					{QuizList()}
 				</c.Content>
 			</c.Entire>
 		</div>
 	);
 };
 
-export default QuizListPage;
+export default GroupListPage;

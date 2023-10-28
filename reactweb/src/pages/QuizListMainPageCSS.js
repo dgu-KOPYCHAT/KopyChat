@@ -95,13 +95,22 @@ export const SortText = styled.p`
 `;
 
 export const QuizListTopBar = styled.div`
-	width: 95%;
+	width: 94%;
 	height: 6%;
 	margin-top: 2%;
+	margin-left: 1.5%;
+	margin-right: 4.5%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	border-bottom: 1px solid #7f7f7f3f;
+`;
+
+export const HrLine2 = styled.hr`
+	width: 94%;
+	height: 0.2px;
+	border: 0;
+	margin: 0;
+	background-color: #7f7f7f3f;
 `;
 
 export const IDText = styled.span`
@@ -136,7 +145,7 @@ export const SolvedAmountText = styled.span`
 
 export const QuizContent = styled.div`
 	width: 100%;
-	height: 64%;
+	height: 63%;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;

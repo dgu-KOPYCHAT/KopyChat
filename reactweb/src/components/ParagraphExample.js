@@ -73,9 +73,10 @@ const ParagraphExample = (props) => {
 						)}
 					</c.ParagraphTitleDiv>
 					<c.ParagraphContentDiv>
-						<c.ParagraphContentText disabled={"true"}>
-							{props.contentInput}
-						</c.ParagraphContentText>
+						<c.ParagraphContentText
+							disabled={true}
+							value={props.contentInput}
+						></c.ParagraphContentText>
 					</c.ParagraphContentDiv>
 				</c.Paragraph>
 				<c.Paragraph>
@@ -83,7 +84,7 @@ const ParagraphExample = (props) => {
 						<c.ParagraphTitleText>예제 출력</c.ParagraphTitleText>
 						<c.Image
 							src={CopyImage}
-							onClick={() => CopyClipBoardR(props.contentInput)}
+							onClick={() => CopyClipBoardR(props.contentOutput)}
 						/>
 						{showBalloonR && (
 							<c.CopyMessageDiv>
@@ -94,9 +95,10 @@ const ParagraphExample = (props) => {
 						)}
 					</c.ParagraphTitleDiv>
 					<c.ParagraphContentDiv>
-						<c.ParagraphContentText disabled={"true"}>
-							{props.contentOutput}
-						</c.ParagraphContentText>
+						<c.ParagraphContentText
+							disabled={true}
+							value={props.contentOutput}
+						></c.ParagraphContentText>
 					</c.ParagraphContentDiv>
 				</c.Paragraph>
 			</c.SubEntire>

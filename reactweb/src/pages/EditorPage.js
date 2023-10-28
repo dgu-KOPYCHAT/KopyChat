@@ -33,7 +33,7 @@ const EditorPage = () => {
 							</c.Info>
 						</c.InfoBarLeft>
 						<c.InfoBarRight>
-							<c.Info marginRight={"1vw"}>
+							<c.Info props={{ marginR: "1vw" }}>
 								<c.Image src={FlagImage} />
 								<c.InfoText>1234 / 5678</c.InfoText>
 							</c.Info>
@@ -43,6 +43,7 @@ const EditorPage = () => {
 					<Post />
 				</c.QuizInfo>
 				<c.QuizEditor>
+					<c.EditorSetting></c.EditorSetting>
 					<Editor />
 				</c.QuizEditor>
 			</c.QuizPage>

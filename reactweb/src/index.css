@@ -63,7 +63,7 @@ code {
 	); /* 0.675rem = 10.8px, 1.35vw = 25.92px (1920x1080), 2.025rem = 32.4px */
 	--font-size-md: clamp(
 		0.6rem,
-		min(1.2vw),
+		min(1.2vw, 2.13vh),
 		1.8rem
 	); /* 0.6rem = 9.6px, 1.2vw = 23.04px (1920x1080), 1.8rem = 28.8px */
 	--font-size-smmd: clamp(

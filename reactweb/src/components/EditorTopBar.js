@@ -20,7 +20,10 @@ const EditorTopBar = () => {
 							<c.MenuText>문제</c.MenuText>
 						</c.TopMenu>
 					</Link>
-					<Link to="/quizlist" style={{ textDecoration: "none" }}>
+					<Link
+						to="/quizlist/main"
+						style={{ textDecoration: "none" }}
+					>
 						<c.TopMenu>
 							<c.MenuText>문제집</c.MenuText>
 						</c.TopMenu>
@@ -30,14 +33,18 @@ const EditorTopBar = () => {
 							<c.MenuText>에디터</c.MenuText>
 						</c.TopMenu>
 					</Link>
-					<c.TopMenu>
-						<c.MenuText>그룹</c.MenuText>
-					</c.TopMenu>
+					<Link to="/grouplist" style={{ textDecoration: "none" }}>
+						<c.TopMenu>
+							<c.MenuText>그룹</c.MenuText>
+						</c.TopMenu>
+					</Link>
 				</c.LeftSide>
 				<c.RightSide>
-					<c.LoginMenu>
-						<c.MenuText>로그인</c.MenuText>
-					</c.LoginMenu>
+					<Link to="/login" style={{ textDecoration: "none" }}>
+						<c.LoginMenu>
+							<c.MenuText>로그인</c.MenuText>
+						</c.LoginMenu>
+					</Link>
 				</c.RightSide>
 			</c.TopBar>
 		</div>

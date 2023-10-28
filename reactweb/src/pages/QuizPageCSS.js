@@ -111,7 +111,7 @@ export const EditorBtn = styled.div`
 	padding: 1vh 1vw;
 	border-radius: 10px;
 	border: 1px solid #181824;
-	background-color: #343456;
+	background-color: #404068;
 `;
 
 export const EditorBtnText = styled.h1`

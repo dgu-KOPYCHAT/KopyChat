@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as c from "./QuizListPageCSS.js";
+import * as c from "./QuizListMainPageCSS.js";
 import TopBar from "../components/TopBar.js";
-import QuizCard from "../components/QuizCard.js";
+import QuizListCard from "../components/QuizListCard.js";
 import Post from "../components/Post.js";
 import DifficultyImage from "../images/Difficulty/prototype.png";
 
-const QuizListPage = () => {
+const QuizListMainPage = () => {
 	function QuizList() {
 		let result = [];
-		for (let i = 0; i < 25; i++) {
-			result.push(<QuizCard />);
+		for (let i = 0; i < 10; i++) {
+			result.push(<QuizListCard />);
 		}
 		return result;
 	}
@@ -22,7 +22,7 @@ const QuizListPage = () => {
 				<c.Content>
 					<c.PageTitle>
 						<c.DifficultyImg src={DifficultyImage} />
-						<c.PageTitleText>문제 목록</c.PageTitleText>
+						<c.PageTitleText>문제집 목록</c.PageTitleText>
 					</c.PageTitle>
 					<c.SortBar>
 						<c.SortDiv>
@@ -35,15 +35,16 @@ const QuizListPage = () => {
 							<c.SortText>ID</c.SortText>
 						</c.SortBtn>
 						<c.SortBtn>
-							<c.SortText>푼 사람 수</c.SortText>
+							<c.SortText>진행률</c.SortText>
 						</c.SortBtn>
 					</c.SortBar>
 					<c.HrLine />
 					<c.QuizListTopBar>
 						<c.IDText>#</c.IDText>
 						<c.QuizTitleText>제목</c.QuizTitleText>
-						<c.SolvedAmountText>푼 사람 수</c.SolvedAmountText>
+						<c.SolvedAmountText>진행률</c.SolvedAmountText>
 					</c.QuizListTopBar>
+					<c.HrLine2 />
 					<c.QuizContent>{QuizList()}</c.QuizContent>
 				</c.Content>
 			</c.Entire>
@@ -51,4 +52,4 @@ const QuizListPage = () => {
 	);
 };
 
-export default QuizListPage;
+export default QuizListMainPage;

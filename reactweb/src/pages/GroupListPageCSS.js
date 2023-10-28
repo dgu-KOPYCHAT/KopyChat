@@ -10,7 +10,7 @@ export const Entire = styled.div`
 `;
 
 export const HrLine = styled.hr`
-	width: 94%;
+	width: 100%;
 	height: 0.2px;
 	border: 0;
 	background-color: #7f7f7f3f;
@@ -18,7 +18,7 @@ export const HrLine = styled.hr`
 
 export const Content = styled.div`
 	width: 65%;
-	height: 80vh;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -26,7 +26,7 @@ export const Content = styled.div`
 
 export const PageTitle = styled.div`
 	width: 100%;
-	height: 15%;
+	height: 20%;
 	margin-top: 1%;
 	margin-bottom: 0%;
 	display: flex;
@@ -51,7 +51,7 @@ export const PageTitleText = styled.h1`
 `;
 
 export const SortBar = styled.div`
-	width: 94%;
+	width: 100%;
 	height: 4%;
 	margin-top: 1%;
 	display: flex;
@@ -96,7 +96,7 @@ export const SortText = styled.p`
 
 export const QuizListTopBar = styled.div`
 	width: 95%;
-	height: 6%;
+	height: 5%;
 	margin-top: 2%;
 	display: flex;
 	flex-direction: row;
@@ -132,26 +132,4 @@ export const SolvedAmountText = styled.span`
 	text-align: center;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
-`;
-
-export const QuizContent = styled.div`
-	width: 100%;
-	height: 64%;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	overflow-y: auto;
-
-	&::-webkit-scrollbar {
-		width: 0.5vw;
-		height: 0.5vw;
-		margin-right: 0.75vw;
-		border-radius: 6px;
-		background: rgba(8, 8, 12, 1);
-	}
-	&::-webkit-scrollbar-thumb {
-		background: rgba(255, 255, 255, 0.4);
-		border-radius: 6px;
-	}
 `;

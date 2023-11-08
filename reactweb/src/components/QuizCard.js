@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
-import DifficultyImage from "../images/Difficulty/prototype.png";
+import DifficultyIcon from "../components/DifficultyIcon.js";
 
 const Entire = styled.div`
 	width: 95%;
@@ -70,11 +70,15 @@ function QuizCard(props) {
 				}}
 			>
 				<QuizID>
-					<DifficultyImg src={DifficultyImage} />
-					<IDText>1234</IDText>
+					<DifficultyIcon
+						difficulty={props.difficulty}
+						level={props.level}
+						size={"sm"}
+					/>
+					<IDText>{props.id}</IDText>
 				</QuizID>
-				<QuizTitleText>문제 이름</QuizTitleText>
-				<SolvedAmountText>0</SolvedAmountText>
+				<QuizTitleText>{props.name}</QuizTitleText>
+				<SolvedAmountText>{props.solvedAmount}</SolvedAmountText>
 			</Link>
 		</Entire>
 	);
@@ -83,7 +87,7 @@ function QuizCard(props) {
 QuizCard.defaultProps = {
 	id: 0,
 	name: "문제 이름",
-	difficulty: "easy",
+	difficulty: "Novice",
 	level: 1,
 	solvedAmount: 0, // 해결한 사람 수
 };

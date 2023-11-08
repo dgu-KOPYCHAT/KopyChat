@@ -10,7 +10,7 @@ export const Entire = styled.div`
 `;
 
 export const HrLine = styled.hr`
-	width: 100%;
+	width: 94%;
 	height: 0.2px;
 	border: 0;
 	background-color: #7f7f7f3f;
@@ -18,7 +18,7 @@ export const HrLine = styled.hr`
 
 export const Content = styled.div`
 	width: 65%;
-	height: 100%;
+	height: 80vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -26,7 +26,7 @@ export const Content = styled.div`
 
 export const PageTitle = styled.div`
 	width: 100%;
-	height: 15%;
+	height: 50%;
 	margin-top: 1%;
 	margin-bottom: 0%;
 	display: flex;
@@ -35,8 +35,14 @@ export const PageTitle = styled.div`
 	align-items: center;
 `;
 
+export const DifficultyImg = styled.img`
+	width: min(5vw, 9vh); /* 5vw = 96px, 9vh = 97.2px */
+	height: min(5vw, 9vh);
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+`;
+
 export const PageTitleText = styled.h1`
-	margin-left: 5%;
 	font-size: var(--font-size-xl);
 	font-family: var(--font-Default-Bold);
 	color: white;
@@ -45,7 +51,7 @@ export const PageTitleText = styled.h1`
 `;
 
 export const SortBar = styled.div`
-	width: 100%;
+	width: 94%;
 	height: 4%;
 	margin-top: 1%;
 	display: flex;
@@ -90,7 +96,7 @@ export const SortText = styled.p`
 
 export const QuizListTopBar = styled.div`
 	width: 95%;
-	height: 5%;
+	height: 6%;
 	margin-top: 2%;
 	display: flex;
 	flex-direction: row;
@@ -98,8 +104,18 @@ export const QuizListTopBar = styled.div`
 	border-bottom: 1px solid #7f7f7f3f;
 `;
 
+export const IDText = styled.span`
+	width: 20%;
+	color: white;
+	font-size: var(--font-size-smmd);
+	font-family: var(--font-Default-Light);
+	text-align: center;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+`;
+
 export const QuizTitleText = styled.span`
-	width: 80%;
+	width: 60%;
 	color: white;
 	font-size: var(--font-size-smmd);
 	font-family: var(--font-Default-Light);
@@ -116,4 +132,26 @@ export const SolvedAmountText = styled.span`
 	text-align: center;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
+`;
+
+export const QuizContent = styled.div`
+	width: 100%;
+	height: 24%; // 64%
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	overflow-y: auto;
+
+	&::-webkit-scrollbar {
+		width: 0.5vw;
+		height: 0.5vw;
+		margin-right: 0.75vw;
+		border-radius: 6px;
+		background: rgba(8, 8, 12, 1);
+	}
+	&::-webkit-scrollbar-thumb {
+		background: rgba(255, 255, 255, 0.4);
+		border-radius: 6px;
+	}
 `;

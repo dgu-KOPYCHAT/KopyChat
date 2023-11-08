@@ -74,9 +74,9 @@ export const SearchIconImage = styled.img`
 `;
 
 export const LoginMenu = styled.div`
-	width: 20vw; /* 20vw = 384px */
+	width: 10vw; /* 10vw = 192px */
 	height: 100%;
-	margin-right: 2vw; /* 2vw = 38.4px */
+	margin-right: 7vw; /* 7vw = 134.4px */
 	display: flex;
 	justify-content: center;
 	align-items: center;

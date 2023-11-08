@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as c from "./QuizListPageCSS.js";
+import * as c from "./QuizSearchPageCSS.js";
 import TopBar from "../components/TopBar.js";
 import QuizCard from "../components/QuizCard.js";
 import Post from "../components/Post.js";
 import DifficultyIcon from "../components/DifficultyIcon.js";
+import DifficultyRangeSlider from "../components/DifficultyRangeSlider.js";
 
-const QuizListPage = () => {
+const QuizSearchPage = () => {
 	function QuizList() {
 		let result = [];
 		for (let i = 0; i < 25; i++) {
@@ -21,12 +22,7 @@ const QuizListPage = () => {
 				<TopBar />
 				<c.Content>
 					<c.PageTitle>
-						<DifficultyIcon
-							difficulty={"Novice"}
-							level={"1"}
-							size={"lg"}
-						/>
-						<c.PageTitleText>문제 목록</c.PageTitleText>
+						<DifficultyRangeSlider />
 					</c.PageTitle>
 					<c.SortBar>
 						<c.SortDiv>
@@ -55,4 +51,4 @@ const QuizListPage = () => {
 	);
 };
 
-export default QuizListPage;
+export default QuizSearchPage;

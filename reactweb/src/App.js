@@ -7,6 +7,8 @@ import QuizListPage from "./pages/QuizListPage";
 import QuizPage from "./pages/QuizPage";
 import GroupListPage from "./pages/GroupListPage";
 import LoginPage from "./pages/LoginPage";
+import UserPage from "./pages/UserPage";
+import QuizSearchPage from "./pages/QuizSearchPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Navbar from "./components/Navbar";
 
@@ -17,6 +19,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<MainPage />} />
 					<Route path="/editor" element={<EditorPage />} />
+					<Route path="/quizsearch" element={<QuizSearchPage />} />
 					<Route path="/quizlist" element={<QuizListPage />} />
 					<Route
 						path="/quizlist/main"
@@ -25,6 +28,7 @@ function App() {
 					<Route path="/quiz" element={<QuizPage />} />
 					<Route path="/grouplist" element={<GroupListPage />} />
 					<Route path="/login" element={<LoginPage />} />
+					<Route path="/user" element={<UserPage />} />
 					<Route path="/*" element={<NotFoundPage />} />
 				</Routes>
 			</BrowserRouter>

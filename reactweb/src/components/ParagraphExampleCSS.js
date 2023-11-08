@@ -145,7 +145,8 @@ export const ParagraphContentText = styled.textarea`
 	text-align: left;
 	vertical-align: middle;
 	resize: none;
-	border: 1px solid #181824;
+	border: 0;
+	// border: 1px solid #181824;
 	// -webkit-user-drag: none;
 	// -webkit-user-select: none;
 `;

@@ -4,7 +4,7 @@ import * as c from "./QuizListMainPageCSS.js";
 import TopBar from "../components/TopBar.js";
 import QuizListCard from "../components/QuizListCard.js";
 import Post from "../components/Post.js";
-import DifficultyImage from "../images/Difficulty/prototype.png";
+import DifficultyIcon from "../components/DifficultyIcon.js";
 
 const QuizListMainPage = () => {
 	function QuizList() {
@@ -21,7 +21,11 @@ const QuizListMainPage = () => {
 				<TopBar />
 				<c.Content>
 					<c.PageTitle>
-						<c.DifficultyImg src={DifficultyImage} />
+						<DifficultyIcon
+							difficulty={"Novice"}
+							level={"1"}
+							size={"lg"}
+						/>
 						<c.PageTitleText>문제집 목록</c.PageTitleText>
 					</c.PageTitle>
 					<c.SortBar>

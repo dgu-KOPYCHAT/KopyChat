@@ -4,7 +4,7 @@ import EditorTopBar from "../components/EditorTopBar";
 import Editor from "../components/Editor.js";
 import Post from "../components/Post.js";
 import * as c from "./EditorPageCSS.js";
-import DifficultyImage from "../images/Difficulty/prototype.png";
+import DifficultyIcon from "../components/DifficultyIcon.js";
 import ClockImage from "../images/clock_icon.png";
 import MemoryImage from "../images/memory_icon.png";
 import FlagImage from "../images/flag_icon.png";
@@ -17,7 +17,11 @@ const EditorPage = () => {
 				<c.QuizInfo>
 					<c.TitleBar>
 						<c.QuizTitle>
-							<c.QuizDifficultyImage src={DifficultyImage} />
+							<DifficultyIcon
+								difficulty={"Novice"}
+								level={"1"}
+								size={"sm"}
+							/>
 							<c.QuizTitleText>문제 이름</c.QuizTitleText>
 						</c.QuizTitle>
 					</c.TitleBar>

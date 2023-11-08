@@ -22,6 +22,7 @@ export const QuizInfo = styled.div`
 export const QuizTitle = styled.div`
 	width: auto;
 	height: 100%;
+	margin-left: -1vw;
 	margin-right: 1vw;
 	display: flex;
 	justify-content: left;

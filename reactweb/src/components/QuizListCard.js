@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import ProgressBar from "./ProgressBar.js";
-import DifficultyImage from "../images/Difficulty/prototype.png";
+import DifficultyIcon from "../components/DifficultyIcon.js";
 
 const Entire = styled.div`
 	width: 95%;
@@ -80,10 +80,14 @@ function QuizListCard(props) {
 				}}
 			>
 				<QuizID>
-					<DifficultyImg src={DifficultyImage} />
-					<IDText>1234</IDText>
+					<DifficultyIcon
+						difficulty={"Novice"}
+						level={"1"}
+						size={"sm"}
+					/>
+					<IDText>{props.id}</IDText>
 				</QuizID>
-				<QuizTitleText>문제집 이름</QuizTitleText>
+				<QuizTitleText>{props.name}</QuizTitleText>
 				<ProgressDiv>
 					<ProgressBar
 						current={props.solvedQuizAmount}

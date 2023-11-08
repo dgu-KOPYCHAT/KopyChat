@@ -15,7 +15,7 @@ const TopBar = () => {
 							<c.LogoText>KOPYCHAT</c.LogoText>
 						</c.Logo>
 					</Link>
-					<Link to="/quiz" style={{ textDecoration: "none" }}>
+					<Link to="/quizsearch" style={{ textDecoration: "none" }}>
 						<c.TopMenu>
 							<c.MenuText>문제</c.MenuText>
 						</c.TopMenu>
@@ -47,6 +47,11 @@ const TopBar = () => {
 						<c.LoginMenu>
 							<c.MenuText>로그인</c.MenuText>
 						</c.LoginMenu>
+					</Link>
+					<Link to="/user" style={{ textDecoration: "none" }}>
+						<c.TopMenu>
+							<c.MenuText>마이페이지</c.MenuText>
+						</c.TopMenu>
 					</Link>
 				</c.RightSide>
 			</c.TopBar>

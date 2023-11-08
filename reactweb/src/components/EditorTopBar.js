@@ -15,7 +15,7 @@ const EditorTopBar = () => {
 							<c.LogoText>KOPYCHAT</c.LogoText>
 						</c.Logo>
 					</Link>
-					<Link to="/quiz" style={{ textDecoration: "none" }}>
+					<Link to="/quizsearch" style={{ textDecoration: "none" }}>
 						<c.TopMenu>
 							<c.MenuText>문제</c.MenuText>
 						</c.TopMenu>

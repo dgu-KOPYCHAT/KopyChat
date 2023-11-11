@@ -12,7 +12,14 @@ import QuizSearchPage from "./pages/QuizSearchPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Navbar from "./components/Navbar";
 
+//import About from './About';
+//import Login from './Login';
+//import Main from './Main';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
 function App() {
+
 	return (
 		<div>
 			<BrowserRouter>

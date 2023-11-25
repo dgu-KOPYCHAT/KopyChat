@@ -4,6 +4,7 @@ import EditorTopBar from "../components/EditorTopBar";
 import Editor from "../components/Editor.js";
 import Post from "../components/Post.js";
 import * as c from "./EditorPageCSS.js";
+import * as s from "../components/ShareAssetCSS.js";
 import DifficultyIcon from "../components/DifficultyIcon.js";
 import ClockImage from "../images/clock_icon.png";
 import MemoryImage from "../images/memory_icon.png";
@@ -22,29 +23,31 @@ const EditorPage = () => {
 								level={"1"}
 								size={"sm"}
 							/>
-							<c.QuizTitleText>문제 이름</c.QuizTitleText>
+							<s.LightText size={"smmd"}>문제 이름</s.LightText>
 						</c.QuizTitle>
 					</c.TitleBar>
 					<c.InfoBar>
 						<c.InfoBarLeft>
 							<c.Info>
-								<c.Image src={ClockImage} />
+								<c.Icon src={ClockImage} />
 								<c.InfoText>1초</c.InfoText>
 							</c.Info>
 							<c.Info>
-								<c.Image src={MemoryImage} />
+								<c.Icon src={MemoryImage} />
 								<c.InfoText>128MB</c.InfoText>
 							</c.Info>
 						</c.InfoBarLeft>
 						<c.InfoBarRight>
 							<c.Info props={{ marginR: "1vw" }}>
-								<c.Image src={FlagImage} />
+								<c.Icon src={FlagImage} />
 								<c.InfoText>1234 / 5678</c.InfoText>
 							</c.Info>
 						</c.InfoBarRight>
 					</c.InfoBar>
-					<c.HrLine />
-					<Post />
+					<s.HrLine />
+					<c.PostDiv>
+						<Post overflow={"auto"} />
+					</c.PostDiv>
 				</c.QuizInfo>
 				<c.QuizEditor>
 					<c.EditorSetting></c.EditorSetting>

@@ -9,8 +9,9 @@ import GroupListPage from "./pages/GroupListPage";
 import LoginPage from "./pages/LoginPage";
 import UserPage from "./pages/UserPage";
 import QuizSearchPage from "./pages/QuizSearchPage";
+import BoardPage from "./pages/BoardPage";
+import PostPage from "./pages/PostPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import Navbar from "./components/Navbar";
 
 function App() {
 	return (
@@ -26,7 +27,9 @@ function App() {
 						element={<QuizListMainPage />}
 					/>
 					<Route path="/quiz" element={<QuizPage />} />
+					<Route path="/post" element={<PostPage />} />
 					<Route path="/grouplist" element={<GroupListPage />} />
+					<Route path="/board" element={<BoardPage />} />
 					<Route path="/login" element={<LoginPage />} />
 					<Route path="/user" element={<UserPage />} />
 					<Route path="/*" element={<NotFoundPage />} />

@@ -9,13 +9,6 @@ export const Entire = styled.div`
 	align-items: center;
 `;
 
-export const HrLine = styled.hr`
-	width: 100%;
-	height: 0.2px;
-	border: 0;
-	background-color: #7f7f7f3f;
-`;
-
 export const Content = styled.div`
 	width: 65%;
 	height: 100%;
@@ -35,59 +28,6 @@ export const PageTitle = styled.div`
 	align-items: center;
 `;
 
-export const PageTitleText = styled.h1`
-	margin-left: 5%;
-	font-size: var(--font-size-xl);
-	font-family: var(--font-Default-Bold);
-	color: white;
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
-`;
-
-export const SortBar = styled.div`
-	width: 100%;
-	height: 4%;
-	margin-top: 1%;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-`;
-
-export const SortBtn = styled.div`
-	width: auto;
-	height: 90%;
-	margin: 0px 0.75%;
-	padding: 0px 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 15px;
-
-	&:hover {
-		background-color: #7f7f7f5f;
-		transition: 0.2s;
-	}
-`;
-
-export const SortDiv = styled.div`
-	width: auto;
-	height: 80%;
-	margin: 0px 0.75%;
-	padding: 0px 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-`;
-
-export const SortText = styled.p`
-	color: white;
-	font-size: var(--font-size-smmd);
-	font-family: var(--font-Default-Light);
-	text-align: center;
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
-`;
-
 export const QuizListTopBar = styled.div`
 	width: 95%;
 	height: 5%;
@@ -96,24 +36,4 @@ export const QuizListTopBar = styled.div`
 	flex-direction: row;
 	align-items: center;
 	border-bottom: 1px solid #7f7f7f3f;
-`;
-
-export const QuizTitleText = styled.span`
-	width: 80%;
-	color: white;
-	font-size: var(--font-size-smmd);
-	font-family: var(--font-Default-Light);
-	text-align: center;
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
-`;
-
-export const SolvedAmountText = styled.span`
-	width: 20%;
-	color: white;
-	font-size: var(--font-size-smmd);
-	font-family: var(--font-Default-Light);
-	text-align: center;
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
 `;

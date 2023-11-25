@@ -1,10 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import * as c from "./GroupListPageCSS.js";
+import * as s from "../components/ShareAssetCSS.js";
 import TopBar from "../components/TopBar.js";
 import GroupCard from "../components/GroupCard.js";
-import Post from "../components/Post.js";
-import DifficultyImage from "../images/Difficulty/prototype.png";
 
 const GroupListPage = () => {
 	function GroupList() {
@@ -21,11 +19,15 @@ const GroupListPage = () => {
 				<TopBar />
 				<c.Content>
 					<c.PageTitle>
-						<c.PageTitleText>그룹 목록</c.PageTitleText>
+						<s.BoldText size={"xl"}>그룹 목록</s.BoldText>
 					</c.PageTitle>
 					<c.QuizListTopBar>
-						<c.QuizTitleText>이름</c.QuizTitleText>
-						<c.SolvedAmountText>인원 수</c.SolvedAmountText>
+						<s.LightText size={"smmd"} width={"80%"}>
+							이름
+						</s.LightText>
+						<s.LightText size={"smmd"} width={"20%"}>
+							인원 수
+						</s.LightText>
 					</c.QuizListTopBar>
 					{GroupList()}
 				</c.Content>

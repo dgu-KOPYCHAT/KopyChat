@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import * as c from "./TopBarCSS.js";
+import * as s from "./ShareAssetCSS.js";
 import LogoImage from "../images/kopychat.png";
 import SearchIcon from "../images/search_icon_gray.png";
 
@@ -11,13 +12,18 @@ const TopBar = () => {
 				<c.LeftSide>
 					<Link to="/" style={{ textDecoration: "none" }}>
 						<c.Logo>
-							<c.LogoImage src={LogoImage}></c.LogoImage>
-							<c.LogoText>KOPYCHAT</c.LogoText>
+							<s.Image
+								src={LogoImage}
+								size={"lg"}
+								marginBottom={"5px"}
+								marginRight={"10px"}
+							></s.Image>
+							<s.BoldText size={"lgxl"}>KOPYCHAT</s.BoldText>
 						</c.Logo>
 					</Link>
 					<Link to="/quizsearch" style={{ textDecoration: "none" }}>
 						<c.TopMenu>
-							<c.MenuText>문제</c.MenuText>
+							<s.BoldText size={"mdlg"}>문제</s.BoldText>
 						</c.TopMenu>
 					</Link>
 					<Link
@@ -25,37 +31,42 @@ const TopBar = () => {
 						style={{ textDecoration: "none" }}
 					>
 						<c.TopMenu>
-							<c.MenuText>문제집</c.MenuText>
+							<s.BoldText size={"mdlg"}>문제집</s.BoldText>
 						</c.TopMenu>
 					</Link>
 					<Link to="/editor" style={{ textDecoration: "none" }}>
 						<c.TopMenu>
-							<c.MenuText>에디터</c.MenuText>
+							<s.BoldText size={"mdlg"}>에디터</s.BoldText>
+						</c.TopMenu>
+					</Link>
+					<Link to="/board" style={{ textDecoration: "none" }}>
+						<c.TopMenu>
+							<s.BoldText size={"mdlg"}>게시판</s.BoldText>
 						</c.TopMenu>
 					</Link>
 					<Link to="/grouplist" style={{ textDecoration: "none" }}>
 						<c.TopMenu>
-							<c.MenuText>그룹</c.MenuText>
+							<s.BoldText size={"mdlg"}>그룹</s.BoldText>
 						</c.TopMenu>
 					</Link>
 					<c.TopMenu>
-						<c.SearchIconImage src={SearchIcon}></c.SearchIconImage>
+						<s.Image size={"sm"} src={SearchIcon}></s.Image>
 					</c.TopMenu>
 				</c.LeftSide>
 				<c.RightSide>
 					<Link to="/login" style={{ textDecoration: "none" }}>
 						<c.LoginMenu>
-							<c.MenuText>로그인</c.MenuText>
+							<s.BoldText size={"mdlg"}>로그인</s.BoldText>
 						</c.LoginMenu>
 					</Link>
 					<Link to="/user" style={{ textDecoration: "none" }}>
 						<c.TopMenu>
-							<c.MenuText>마이페이지</c.MenuText>
+							<s.BoldText size={"mdlg"}>마이페이지</s.BoldText>
 						</c.TopMenu>
 					</Link>
 				</c.RightSide>
 			</c.TopBar>
-			<c.HrLine />
+			<s.HrLine />
 		</div>
 	);
 };

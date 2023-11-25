@@ -3,9 +3,9 @@ import * as c from "./PostCSS.js";
 import Paragraph from "./Paragraph.js";
 import ParagraphExample from "./ParagraphExample.js";
 
-const Post = () => {
+const Post = (props) => {
 	return (
-		<c.Entire>
+		<c.Entire overflow={props.overflow}>
 			<Paragraph
 				title={"문제 설명"}
 				content={

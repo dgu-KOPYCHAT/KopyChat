@@ -1,10 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import * as c from "./QuizSearchPageCSS.js";
 import TopBar from "../components/TopBar.js";
 import QuizCard from "../components/QuizCard.js";
-import Post from "../components/Post.js";
-import DifficultyIcon from "../components/DifficultyIcon.js";
 import DifficultyRangeSlider from "../components/DifficultyRangeSlider.js";
 
 const QuizSearchPage = () => {

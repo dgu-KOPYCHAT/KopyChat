@@ -29,16 +29,6 @@ export const QuizTitle = styled.div`
 	align-items: center;
 `;
 
-export const QuizDifficultyImage = styled.img`
-	width: min(3vw, 5vh); /* 3vw = 57.6px, 5vh = 54px */
-	height: min(3vw, 5vh);
-	margin-left: -0.5vw;
-	margin-right: -0.1vw;
-	margin-top: 3px;
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
-`;
-
 export const QuizTitleText = styled.p`
 	width: auto;
 	color: white;
@@ -61,7 +51,7 @@ export const InfoBar = styled.div`
 	width: 100%;
 	height: 6%;
 	margin-top: 0.5vw;
-	margin-bottom: -0.5vw;
+	margin-bottom: 0vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -109,21 +99,12 @@ export const InfoText = styled.h1`
 	-webkit-user-select: none;
 `;
 
-export const Image = styled.img`
+export const Icon = styled.img`
 	width: min(1vw, 2vh); /* 1vw = 19.2px, 2vh = 21.6px */
 	height: min(1vw, 2vh);
 	margin-right: 0.1vw; /* 0.1vw = 1.92px */
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
-`;
-
-export const HrLine = styled.hr`
-	width: 96%;
-	height: 0.2px;
-	text-align: left;
-	margin-left: 0;
-	border: 0;
-	background-color: #7f7f7f3f;
 `;
 
 export const QuizEditor = styled.div`
@@ -143,4 +124,15 @@ export const EditorSetting = styled.div`
 	justify-content: left;
 	align-items: center;
 	background-color: #222333;
+`;
+
+export const PostDiv = styled.div`
+	width: 100%;
+	height: 86%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 `;

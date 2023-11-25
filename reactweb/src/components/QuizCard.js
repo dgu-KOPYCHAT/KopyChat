@@ -25,11 +25,6 @@ const QuizID = styled.div`
 	align-items: center;
 `;
 
-const DifficultyImg = styled.img`
-	width: min(1.5vw, 3vh); /* 1.5vw = 28.8px, 3vh = 32.4px */
-	height: min(1.5vw, 3vh);
-`;
-
 const IDText = styled.span`
 	width: 80%;
 	margin-left: 5px;

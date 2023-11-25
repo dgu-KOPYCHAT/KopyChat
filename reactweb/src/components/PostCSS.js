@@ -2,14 +2,14 @@ import styled, { css } from "styled-components";
 
 export const Entire = styled.div`
 	width: 100%;
-	height: 100%;
-	margin-top: 2vh; /* 2vh = 21.6px */
-	margin-bottom: 5vh; /* 5vh = 54px */
+	height: auto;
 	display: flex;
 	flex: 1 1 0;
 	flex-direction: column;
 	align-items: center;
-	overflow-y: auto;
+
+	overflow-y: ${(props) =>
+		props.overflow === null ? "hidden" : props.overflow};
 
 	&::-webkit-scrollbar {
 		width: 8px;

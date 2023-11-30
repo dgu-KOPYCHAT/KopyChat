@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API test page</title>
+</head>
+
+<body>
+    <form id="form1">
+        <label for="inputcode">자바 코드 입력</label>
+        <br>
+        <input type="text" id="inputcode" style="width: 80%; height: 50px;"
+            value='public class Main{ public static void main(String[] args) { System.out.println("Hello, Kopychat"); } }'>
+        <br>
+        <button type="submit" onclick="submitForm()">실행</button>
+    </form>
+
+    <input type="text" id="outputcode" style="width: 80%; height: 50px;" value="" readonly>
+
+    <script>
+        async function submitForm() {
+            const code = document.getElementById('inputcode').value;
+            fetch('http://localhost:8000/compile',{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'text/plain',
+                },
+                body: code,
+            })
+            .then(res => res.text())
+            .then(data => {document.getElementById('outputcode').value = data;})
+            .catch(err => {console.error("Error : ", err);});
+            event.preventDefault();
+        }
+    </script>
+</body>
+
+</html>

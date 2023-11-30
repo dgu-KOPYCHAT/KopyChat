@@ -1,12 +1,20 @@
 import React from "react";
 import AceEditor from "react-ace";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as c from "./EditorCSS.js";
 import styled from "styled-components";
 // import "./Editor.css";
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-monokai";
+import "ace-builds/src-noconflict/theme-github";
+import "ace-builds/src-noconflict/theme-tomorrow";
+import "ace-builds/src-noconflict/theme-kuroir";
+import "ace-builds/src-noconflict/theme-twilight";
+import "ace-builds/src-noconflict/theme-xcode";
+import "ace-builds/src-noconflict/theme-textmate";
 import "ace-builds/src-noconflict/theme-solarized_dark";
+import "ace-builds/src-noconflict/theme-solarized_light";
+import "ace-builds/src-noconflict/theme-terminal";
 
 const javaFilePath = process.env.PUBLIC_URL + "example.java";
 let example = "";
@@ -21,7 +29,7 @@ fetch(javaFilePath)
 		console.error("Cannot load java example.", error);
 	});
 
-const Editor = () => {
+const Editor = (props) => {
 	const editorRef = useRef(null);
 
 	useEffect(() => {
@@ -37,14 +45,13 @@ const Editor = () => {
 				<AceEditor
 					placeholder="Java 코드를 작성해 주세요."
 					mode="java"
-					theme="monokai"
+					theme={props.theme}
 					name="my-editor"
 					fontSize={18}
 					value={example}
 					style={{
 						width: "100%",
 						height: "100%",
-						backgroundColor: "#181824",
 					}}
 					ref={editorRef}
 				/>

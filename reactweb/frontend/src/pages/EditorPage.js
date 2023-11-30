@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import TopBar from "../components/TopBar";
 import EditorTopBar from "../components/EditorTopBar";
 import Editor from "../components/Editor.js";
@@ -8,8 +8,16 @@ import DifficultyIcon from "../components/DifficultyIcon.js";
 import ClockImage from "../images/clock_icon.png";
 import MemoryImage from "../images/memory_icon.png";
 import FlagImage from "../images/flag_icon.png";
+import ThemeSelectBox from "../components/ThemeSelectBox.js";
 
 const EditorPage = () => {
+	const [Selected, setSelected] = useState("monokai");
+
+	const handleSelect = (selected) => {
+		console.log(`arrived ${selected}`);
+		setSelected(selected);
+	}
+
 	return (
 		<div>
 			<EditorTopBar />
@@ -47,8 +55,10 @@ const EditorPage = () => {
 					<Post />
 				</c.QuizInfo>
 				<c.QuizEditor>
-					<c.EditorSetting></c.EditorSetting>
-					<Editor />
+					<c.EditorSetting>
+						<ThemeSelectBox onSelect={handleSelect}/>
+					</c.EditorSetting>
+					<Editor theme={Selected}/>
 				</c.QuizEditor>
 			</c.QuizPage>
 		</div>

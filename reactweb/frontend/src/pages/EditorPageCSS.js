@@ -136,6 +136,8 @@ export const QuizEditor = styled.div`
 `;
 
 export const EditorSetting = styled.div`
+	z-index: 9999;
+	padding: 5px;
 	width: 100%;
 	height: 6%;
 	display: flex;

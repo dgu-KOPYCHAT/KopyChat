@@ -11,6 +11,7 @@ import UserPage from "./pages/UserPage";
 import QuizSearchPage from "./pages/QuizSearchPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Navbar from "./components/Navbar";
+import Board from './pages/Board'; // 
 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -50,6 +51,7 @@ function App() {
 					<Route path="/grouplist" element={<GroupListPage />} />
 					<Route path="/login" element={<LoginPage />} />
 					<Route path="/user" element={<UserPage />} />
+					<Route path="/board" element={<Board />} />
 					<Route path="/*" element={<NotFoundPage />} />
 				</Routes>
 			</BrowserRouter>

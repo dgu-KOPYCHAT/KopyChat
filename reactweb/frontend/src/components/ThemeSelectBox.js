@@ -3,15 +3,15 @@ import Select from 'react-select';
 
 const optionsarray = [
     "monokai",
+    "twilight",
+    "terminal",
+    "solarized_dark",
+    "solarized_light",
     "github",
     "tomorrow",
     "kuroir",
-    "twilight",
     "xcode",
     "textmate",
-    "solarized_dark",
-    "solarized_light",
-    "terminal",
 ]
 
 const options = optionsarray.map((value)=>({

@@ -43,17 +43,19 @@ const Editor = (props) => {
 		<div style={{ width: "100%", height: "100%" }}>
 			<c.Entire>
 				<AceEditor
-					placeholder="Java 코드를 작성해 주세요."
+					placeholder="java로 main을 포함한 코드 작성"
 					mode="java"
 					theme={props.theme}
 					name="my-editor"
-					fontSize={18}
+					fontSize={24}
 					value={example}
+					onChange={props.onChange}
 					style={{
 						width: "100%",
 						height: "100%",
 					}}
 					ref={editorRef}
+					showPrintMargin={false}
 				/>
 			</c.Entire>
 		</div>

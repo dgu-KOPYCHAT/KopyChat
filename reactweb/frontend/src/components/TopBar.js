@@ -38,6 +38,11 @@ const TopBar = () => {
 							<c.MenuText>그룹</c.MenuText>
 						</c.TopMenu>
 					</Link>
+					<Link to="/board" style={{ textDecoration: "none" }}>
+						<c.TopMenu>
+							<c.MenuText>게시판</c.MenuText>
+						</c.TopMenu>
+					</Link>
 					<c.TopMenu>
 						<c.SearchIconImage src={SearchIcon}></c.SearchIconImage>
 					</c.TopMenu>

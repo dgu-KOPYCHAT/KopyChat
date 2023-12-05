@@ -1,5 +1,14 @@
 import styled, { css } from "styled-components";
 
+export const Entire = styled.div`
+	width: 100vw;
+	height: 100vh;
+	background-color: #222233;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`;
+
 export const QuizPage = styled.div`
 	width: 100vw;
 	height: 90vh; /* 90vh = 972px */
@@ -136,11 +145,40 @@ export const QuizEditor = styled.div`
 `;
 
 export const EditorSetting = styled.div`
+	z-index: 9999;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	width: 100%;
 	height: 6%;
 	display: flex;
 	flex-direction: row;
-	justify-content: left;
+	justify-content: space-between;
 	align-items: center;
 	background-color: #222333;
+`;
+
+export const InstantBtn = styled.button`
+	width: auto;
+	margin: 1vh 1vw;
+	padding: 1vh 3vw;
+	border-radius: 10px;
+	border: 1px solid #181824;
+	background-color: #404068;
+	&:hover {
+		background-color: #6e6eb3;
+	}
+`;
+
+export const InstantBtnText = styled.h1`
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	font-size: 20px;
+	font-family: var(--font-Default-Bold);
+	color: white;
+	line-height: 1.5;
+	display: inline-block;
+	white-space: nowrap;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
 `;

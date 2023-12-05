@@ -11,7 +11,7 @@
 다음 명령어로 oauth 서버를 실행하여 구글 로그인 절차와 인증에 대기한다.
 ```shell
 cd reactweb/backend
--작성필요-
+npx nodemon index
 ```
 ### 2. judge 실행
 서버 장치에 jdk가 설치되어 있지 않다면 패키지 명령어 혹은 아래 링크를 참고하여 설치한다.

@@ -43,5 +43,19 @@ app.post("/api/insert", (req, res) => {
     });
 });
 
+app.delete("/api/delete/:id", (req, res) => {
+    const id = parseInt(req.params.id);
+    const sqlQuery = "DELETE FROM board WHERE idx = ?";
+    db2.query(sqlQuery, [id], (err, result) => {
+        if (err) {
+            console.error('삭제 실패:', err);
+            res.status(500).send('삭제 실패');
+        } else {
+            console.log('삭제 성공:', result);
+            res.send('삭제 성공');
+        }
+    });
+});
+
 app.listen(PORT, () => console.log(`this server listening on ${PORT}`))
 

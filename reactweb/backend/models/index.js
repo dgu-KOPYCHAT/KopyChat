@@ -7,7 +7,15 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
+const databases=Object.keys(config.databases);
 
+for (let i=0; i<databases.length; i++) {
+  const database=databases[i];
+  const dbPath=config.databases[database];
+  const sequelize = new Sequelize(dbPath.database, dbPath.username, dbPath.password, dbPath);
+  db[database]= sequelize;
+}
+/*
 let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
@@ -23,6 +31,7 @@ if (config_kopy.use_env_variable) {
 } else {
   sequelize_kopy = new Sequelize(config_kopy.database, config_kopy.username, config_kopy.password, config_kopy);
 }
+*/
 
 fs
   .readdirSync(__dirname)
@@ -35,12 +44,25 @@ fs
     );
   })
   .forEach(file => {
+    //const model = db.login_db.import(path.join(__dirname, file));
     const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
     db[model.name] = model;
+  });
 
-    // Assuming you want to load the same models for the second DB
-    const model_kopy = require(path.join(__dirname, file))(sequelize_kopy, Sequelize.DataTypes);
-    db[model.name + '_kopy'] = model_kopy; // Store it with a different key
+  fs
+  .readdirSync(__dirname)
+  .filter(file => {
+    return (
+      file.indexOf('.') !== 0 &&
+      file !== basename &&
+      file.slice(-3) === '.js' &&
+      file.indexOf('.test.js') === -1
+    );
+  })
+  .forEach(file => {
+    //const model = db.board_db.import(path.join(__dirname, file));
+    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+    db[model.name] = model;
   });
 
 Object.keys(db).forEach(modelName => {
@@ -49,8 +71,14 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+db.sequelize=db['login_db'];
+db.sequelize_b=db['board_db'];
+db.Sequelize=Sequelize;
+
+/*
 db.sequelize = sequelize;
 db.sequelize_kopy = sequelize_kopy; // Add the second Sequelize instance to the db object
 db.Sequelize = Sequelize;
+*/
 
 module.exports = db;

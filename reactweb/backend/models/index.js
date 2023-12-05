@@ -6,16 +6,10 @@ const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
+const config_board= require(__dirname + '/../config/config_board.json')[env];
 const db = {};
-const databases=Object.keys(config.databases);
 
-for (let i=0; i<databases.length; i++) {
-  const database=databases[i];
-  const dbPath=config.databases[database];
-  const sequelize = new Sequelize(dbPath.database, dbPath.username, dbPath.password, dbPath);
-  db[database]= sequelize;
-}
-/*
+
 let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
@@ -24,44 +18,43 @@ if (config.use_env_variable) {
 }
 
 // Initialize the second database connection
-let sequelize_kopy;
-const config_kopy = require(__dirname + '/../config/config.json')['development_kopy']; // Assuming 'development_kopy' is always used for the second DB
-if (config_kopy.use_env_variable) {
-  sequelize_kopy = new Sequelize(process.env[config_kopy.use_env_variable], config_kopy);
+let sequelize_board;
+if (config_board.use_env_variable) {
+  sequelize_board = new Sequelize(process.env[config_board.use_env_variable], config_board);
 } else {
-  sequelize_kopy = new Sequelize(config_kopy.database, config_kopy.username, config_kopy.password, config_kopy);
+  sequelize_board = new Sequelize(config_board.database, config_board.username, config_board.password, config_board);
 }
-*/
+
 
 fs
-  .readdirSync(__dirname)
+  .readdirSync(__dirname+'/login')
   .filter(file => {
     return (
       file.indexOf('.') !== 0 &&
       file !== basename &&
-      file.slice(-3) === '.js' &&
-      file.indexOf('.test.js') === -1
-    );
+      file.slice(-3) === '.js');
   })
   .forEach(file => {
-    //const model = db.login_db.import(path.join(__dirname, file));
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+    const model = require(path.join(__dirname + '/login', file))(sequelize, Sequelize.DataTypes);
     db[model.name] = model;
   });
 
-  fs
-  .readdirSync(__dirname)
+  Object.keys(db).forEach(modelName => {
+    if (db[modelName].associate) {
+      db[modelName].associate(db);
+    }
+  });
+  
+fs
+  .readdirSync(__dirname+'/board')
   .filter(file => {
     return (
       file.indexOf('.') !== 0 &&
       file !== basename &&
-      file.slice(-3) === '.js' &&
-      file.indexOf('.test.js') === -1
-    );
+      file.slice(-3) === '.js');
   })
   .forEach(file => {
-    //const model = db.board_db.import(path.join(__dirname, file));
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+    const model = require(path.join(__dirname + '/board', file))(sequelize_board, Sequelize.DataTypes);
     db[model.name] = model;
   });
 
@@ -71,14 +64,8 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
-db.sequelize=db['login_db'];
-db.sequelize_b=db['board_db'];
+db.sequelize=sequelize;
+db.sequelize_board=sequelize_board;
 db.Sequelize=Sequelize;
-
-/*
-db.sequelize = sequelize;
-db.sequelize_kopy = sequelize_kopy; // Add the second Sequelize instance to the db object
-db.Sequelize = Sequelize;
-*/
 
 module.exports = db;

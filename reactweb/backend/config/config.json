@@ -1,34 +1,26 @@
 {
   "development": {
-    "databases": {
-      "login_db": {
-        "username": "kopychat",
-        "password": "zhvlcot1234",
-        "database": "oauth-login-system",
-        "host": "database-1.cfcltcgk8ise.ap-northeast-2.rds.amazonaws.com",
-        "dialect": "mysql"
-      }, 
-    "board_db": {
-      "username": "kopychat",
-      "password": "zhvlcot1234",
-      "database": "kopychat",
-      "host": "database-1.cfcltcgk8ise.ap-northeast-2.rds.amazonaws.com",
-      "dialect": "mysql"
-    }
-  }
+    "username": "kopychat",
+    "password": "zhvlcot1234",
+    "database": "oauth-login-system",
+    "host": "database-1.cfcltcgk8ise.ap-northeast-2.rds.amazonaws.com",
+    "dialect": "mysql",
+    "timezone": "+09:00"
 },
   "test": {
     "username": "kopychat",
     "password": "zhvlcot1234",
     "database": "database_test",
     "host": "database-1.cfcltcgk8ise.ap-northeast-2.rds.amazonaws.com",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "timezone": "+09:00"
   },
   "production": {
     "username": "kopychat",
     "password": "zhvlcot1234",
     "database": "database_production",
     "host": "database-1.cfcltcgk8ise.ap-northeast-2.rds.amazonaws.com",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "timezone": "+09:00"
   }
 }

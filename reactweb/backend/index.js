@@ -13,7 +13,7 @@ const db2 = mysql.createPool({
     host: "database-1.cfcltcgk8ise.ap-northeast-2.rds.amazonaws.com",
     user: "kopychat",
     password: "zhvlcot1234",
-    database: "oauth-login-system"
+    database: "kopychat"
 });
 
 app.use(cors({

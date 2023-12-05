@@ -53,7 +53,7 @@ export const PageTitleText = styled.h1`
 export const SortBar = styled.div`
 	width: 94%;
 	height: 4%;
-	margin-top: 1%;
+	margin-top: 11%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -136,7 +136,7 @@ export const SolvedAmountText = styled.span`
 
 export const QuizContent = styled.div`
 	width: 100%;
-	height: 24%; // 64%
+	height: 64%; // 64%
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;

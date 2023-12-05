@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import * as c from "./QuizListPageCSS.js";
+import * as s from "../components/ShareAssetCSS.js";
 import TopBar from "../components/TopBar.js";
 import QuizCard from "../components/QuizCard.js";
-import Post from "../components/Post.js";
 import DifficultyIcon from "../components/DifficultyIcon.js";
 
 const QuizListPage = () => {
@@ -30,23 +29,29 @@ const QuizListPage = () => {
 					</c.PageTitle>
 					<c.SortBar>
 						<c.SortDiv>
-							<c.SortText>정렬 : </c.SortText>
+							<s.LightText size={"smmd"}>정렬 :</s.LightText>
 						</c.SortDiv>
 						<c.SortBtn>
-							<c.SortText>레벨</c.SortText>
+							<s.LightText size={"smmd"}>레벨</s.LightText>
 						</c.SortBtn>
 						<c.SortBtn>
-							<c.SortText>ID</c.SortText>
+							<s.LightText size={"smmd"}>ID</s.LightText>
 						</c.SortBtn>
 						<c.SortBtn>
-							<c.SortText>푼 사람 수</c.SortText>
+							<s.LightText size={"smmd"}>푼 사람 수</s.LightText>
 						</c.SortBtn>
 					</c.SortBar>
 					<c.HrLine />
 					<c.QuizListTopBar>
-						<c.IDText>#</c.IDText>
-						<c.QuizTitleText>제목</c.QuizTitleText>
-						<c.SolvedAmountText>푼 사람 수</c.SolvedAmountText>
+						<s.LightText size={"smmd"} width={"20%"}>
+							#
+						</s.LightText>
+						<s.LightText size={"smmd"} width={"60%"}>
+							제목
+						</s.LightText>
+						<s.LightText size={"smmd"} width={"20%"}>
+							푼 사람 수
+						</s.LightText>
 					</c.QuizListTopBar>
 					<c.QuizContent>{QuizList()}</c.QuizContent>
 				</c.Content>

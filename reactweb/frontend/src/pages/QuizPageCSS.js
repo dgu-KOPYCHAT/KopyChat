@@ -7,19 +7,25 @@ export const Entire = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-`;
 
-export const HrLine = styled.hr`
-	width: 100%;
-	height: 0.2px;
-	margin-top: -0.2px;
-	border: 0;
-	background-color: #7f7f7f3f;
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	&::-webkit-scrollbar {
+		width: 0.5vw;
+		border-radius: 6px;
+		background: rgba(8, 8, 12, 1);
+	}
+	&::-webkit-scrollbar-thumb {
+		background: rgba(255, 255, 255, 0.4);
+		border-radius: 6px;
+	}
 `;
 
 export const ContentDiv = styled.div`
 	width: 100%;
-	height: 100%;
+	height: auto;
+	margin-bottom: 10vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -36,7 +42,7 @@ export const IndexDiv = styled.div`
 
 export const Content = styled.div`
 	width: 60%;
-	height: 100%;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -52,9 +58,9 @@ export const ExplorerDiv = styled.div`
 
 export const FixedQuizInfo = styled.div`
 	width: 100%;
-	height: 20%;
-	margin-top: 1%;
-	margin-bottom: 1%;
+	height: 15vh;
+	margin-top: 5vh;
+	margin-bottom: 1vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -87,21 +93,6 @@ export const PageTitleRight = styled.div`
 	flex-direction: row;
 	justify-content: right;
 	align-items: center;
-`;
-
-export const DifficultyImg = styled.img`
-	width: min(4vw, 7vh); /* 4vw = 76.8px, 7vh = 75.6px */
-	height: min(4vw, 7vh);
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
-`;
-
-export const PageTitleText = styled.h1`
-	font-size: var(--font-size-lg);
-	font-family: var(--font-Default-Bold);
-	color: white;
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
 `;
 
 export const EditorBtn = styled.div`
@@ -167,34 +158,12 @@ export const Info = styled.div`
 	align-items: center;
 `;
 
-export const InfoNameText = styled.h1`
-	width: auto;
-	margin: 0px 7.5px;
-	font-size: var(--font-size-smmd);
-	font-family: var(--font-Default-Bold);
-	color: white;
-	white-space: nowrap;
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
-`;
-
-export const InfoText = styled.h1`
-	width: auto;
-	margin: 0px 7.5px;
-	margin-left: ${(props) => props.marginLeft};
-	font-size: var(--font-size-lg);
-	font-family: var(--font-Default-Bold);
-	color: white;
-	white-space: nowrap;
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
-`;
-
-export const QuizContent = styled.div`
+export const PostDiv = styled.div`
 	width: 100%;
-	height: 85%;
+	height: 80%;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	overflow-y: auto;
 `;

@@ -155,3 +155,31 @@ export const QuizContent = styled.div`
 		border-radius: 6px;
 	}
 `;
+
+export const QuizInsertBtn = styled.div`
+	text-align: center;
+	width: 100%;
+	height: 50%;
+	margin: 1vh 1vw;
+	padding: 1vh 1vw;
+	border-radius: 10px;
+	border: 1px solid #181824;
+	background-color: #404068;
+	&:hover {
+		background-color: #6e6eb3;
+	}
+`;
+
+export const QuizInsertText = styled.text`
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	font-size: var(--font-size-md);
+	font-family: var(--font-Default-Bold);
+	color: white;
+	line-height: 1.5;
+	display: inline-block;
+	white-space: nowrap;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+`;

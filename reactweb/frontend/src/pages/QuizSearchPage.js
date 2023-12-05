@@ -40,6 +40,18 @@ const QuizSearchPage = () => {
 						<c.SolvedAmountText>푼 사람 수</c.SolvedAmountText>
 					</c.QuizListTopBar>
 					<c.QuizContent>{QuizList()}</c.QuizContent>
+					<Link
+						to="/quiz/insert"
+						style={
+							({ textDecoration: "none" },
+								{ width: "auto" })
+						}>
+						<c.QuizInsertBtn>
+							<c.QuizInsertText>
+								문제 작성
+							</c.QuizInsertText>
+						</c.QuizInsertBtn>
+					</Link>
 				</c.Content>
 			</c.Entire>
 		</div>

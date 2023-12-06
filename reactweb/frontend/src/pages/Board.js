@@ -4,7 +4,7 @@ import TopBar from "../components/TopBar.js";
 
 //아래는 편집기와 백엔드
 import "./Board.css";
-import * as c from "./BoardCSS.js";
+import * as c from "./CSS/BoardCSS.js";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import ReactHtmlParser from "react-html-parser";

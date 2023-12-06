@@ -1,5 +1,5 @@
 import React from "react";
-import * as c from "./PostCSS.js";
+import * as c from "./CSS/PostCSS.js";
 import Paragraph from "./Paragraph.js";
 import ParagraphExample from "./ParagraphExample.js";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as c from "./QuizPageCSS.js";
-import * as s from "../components/ShareAssetCSS.js";
+import * as c from "./CSS/QuizPageCSS.js";
+import * as s from "../components/CSS/ShareAssetCSS.js";
 import TopBar from "../components/TopBar.js";
 import Post from "../components/Post.js";
 import DifficultyIcon from "../components/DifficultyIcon.js";

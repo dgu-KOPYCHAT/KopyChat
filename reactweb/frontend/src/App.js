@@ -13,7 +13,7 @@ import QuizSearchPage from "./pages/QuizSearchPage";
 import BoardPage from "./pages/BoardPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Navbar from "./components/Navbar";
-import Board from "./pages/Board"; //
+import Board from "./pages/Board";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -47,18 +47,22 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<MainPage />} />
-					<Route path="/editor" element={<EditorPage />} />
+					<Route path="/*" element={<NotFoundPage />} />
+					{/* <Route path="/login" element={<LoginPage />} /> */}
+
 					<Route path="/quizsearch" element={<QuizSearchPage />} />
 					<Route path="/quizlist" element={<QuizListPage />} />
 					<Route path="/quizlist/main" element={<QuizListMainPage />} />
 					<Route path="/quiz" element={<QuizPage />} />
 					<Route path="/quizinsert" element={<QuizInsertPage />} />
-					<Route path="/grouplist" element={<GroupListPage />} />
-					<Route path="/login" element={<LoginPage />} />
-					<Route path="/user" element={<UserPage />} />
-					<Route path="/board" element={<BoardPage />} />
+					
 					<Route path="/postwrite" element={<Board />} />
-					<Route path="/*" element={<NotFoundPage />} />
+					<Route path="/board" element={<BoardPage />} />
+					
+					<Route path="/editor" element={<EditorPage />} />
+					<Route path="/user" element={<UserPage />} />
+					
+					<Route path="/grouplist" element={<GroupListPage />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

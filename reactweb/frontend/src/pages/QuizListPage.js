@@ -1,6 +1,6 @@
 import React from "react";
-import * as c from "./QuizListPageCSS.js";
-import * as s from "../components/ShareAssetCSS.js";
+import * as c from "./CSS/QuizListPageCSS.js";
+import * as s from "../components/CSS/ShareAssetCSS.js";
 import TopBar from "../components/TopBar.js";
 import QuizCard from "../components/QuizCard.js";
 import DifficultyIcon from "../components/DifficultyIcon.js";

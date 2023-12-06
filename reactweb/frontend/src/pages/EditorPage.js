@@ -4,7 +4,7 @@ import EditorTopBar from "../components/EditorTopBar";
 import Editor from "../components/Editor.js";
 import EditorResult from "../components/EditorResult.js";
 import Post from "../components/Post.js";
-import * as c from "./EditorPageCSS.js";
+import * as c from "./CSS/EditorPageCSS.js";
 import DifficultyIcon from "../components/DifficultyIcon.js";
 import ClockImage from "../images/clock_icon.png";
 import MemoryImage from "../images/memory_icon.png";

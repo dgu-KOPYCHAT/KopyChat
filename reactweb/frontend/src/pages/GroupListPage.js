@@ -1,6 +1,6 @@
 import React from "react";
-import * as c from "./GroupListPageCSS.js";
-import * as s from "../components/ShareAssetCSS.js";
+import * as c from "./CSS/GroupListPageCSS.js";
+import * as s from "../components/CSS/ShareAssetCSS.js";
 import TopBar from "../components/TopBar.js";
 import GroupCard from "../components/GroupCard.js";
 

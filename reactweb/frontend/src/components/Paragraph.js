@@ -1,5 +1,5 @@
 import React from "react";
-import * as c from "./ParagraphCSS.js";
+import * as c from "./CSS/ParagraphCSS.js";
 
 const Paragraph = (props) => {
 	return (

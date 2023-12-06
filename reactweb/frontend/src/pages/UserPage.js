@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as c from "./UserPageCSS.js";
+import * as c from "./CSS/UserPageCSS.js";
 import TopBar from "../components/TopBar.js";
 import ProfileImage from "../images/user_icon.png";
 

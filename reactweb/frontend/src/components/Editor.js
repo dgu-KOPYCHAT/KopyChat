@@ -1,7 +1,7 @@
 import React from "react";
 import AceEditor from "react-ace";
 import { useEffect, useRef, useState } from "react";
-import * as c from "./EditorCSS.js";
+import * as c from "./CSS/EditorCSS.js";
 import styled from "styled-components";
 // import "./Editor.css";
 import "ace-builds/src-noconflict/mode-java";

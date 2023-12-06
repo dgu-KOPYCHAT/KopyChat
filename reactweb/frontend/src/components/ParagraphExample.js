@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import * as c from "./ParagraphExampleCSS.js";
+import * as c from "./CSS/ParagraphExampleCSS.js";
 import CopyImage from "../images/copy_icon.png";
 
 const ParagraphExample = (props) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
-import * as c from "./QuizInsertPageCSS.js";
+import * as c from "./CSS/QuizInsertPageCSS.js";
 import TopBar from "../components/TopBar.js";
 import GroupCard from "../components/GroupCard.js";
 import Post from "../components/Post.js";

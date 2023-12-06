@@ -1,6 +1,6 @@
 import React from "react";
 //import { Link } from "react-router-dom";
-import * as c from "./LoginPageCSS.js";
+import * as c from "./CSS/LoginPageCSS.js";
 import TopBar from "../components/TopBar.js";
 
 const LoginPage = () => {

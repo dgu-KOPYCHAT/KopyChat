@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as c from "./EditorTopBarCSS.js";
-import * as s from "./ShareAssetCSS.js";
+import * as c from "./CSS/EditorTopBarCSS.js";
+import * as s from "./CSS/ShareAssetCSS.js";
 import LogoImage from "../images/kopychat.png";
 
 const EditorTopBar = () => {

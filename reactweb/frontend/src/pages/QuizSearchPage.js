@@ -4,7 +4,6 @@ import * as c from "./QuizSearchPageCSS.js";
 import TopBar from "../components/TopBar.js";
 import QuizCard from "../components/QuizCard.js";
 import DifficultyRangeSlider from "../components/DifficultyRangeSlider.js";
-import { Link } from 'react-router-dom';
 
 const QuizSearchPage = () => {
 	function QuizList() {

@@ -26,7 +26,7 @@ export const Content = styled.div`
 
 export const PageTitle = styled.div`
 	width: 100%;
-	height: 50%;
+	height: 15%;
 	margin-top: 1%;
 	margin-bottom: 0%;
 	display: flex;
@@ -53,7 +53,7 @@ export const PageTitleText = styled.h1`
 export const SortBar = styled.div`
 	width: 94%;
 	height: 4%;
-	margin-top: 11%;
+	margin-top: 1%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -136,7 +136,7 @@ export const SolvedAmountText = styled.span`
 
 export const QuizContent = styled.div`
 	width: 100%;
-	height: 64%; // 64%
+	height: 64%;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -154,32 +154,4 @@ export const QuizContent = styled.div`
 		background: rgba(255, 255, 255, 0.4);
 		border-radius: 6px;
 	}
-`;
-
-export const QuizInsertBtn = styled.div`
-	text-align: center;
-	width: 100%;
-	height: 50%;
-	margin: 1vh 1vw;
-	padding: 1vh 1vw;
-	border-radius: 10px;
-	border: 1px solid #181824;
-	background-color: #404068;
-	&:hover {
-		background-color: #6e6eb3;
-	}
-`;
-
-export const QuizInsertText = styled.text`
-	width: 100%;
-	height: 100%;
-	margin: 0px;
-	font-size: var(--font-size-md);
-	font-family: var(--font-Default-Bold);
-	color: white;
-	line-height: 1.5;
-	display: inline-block;
-	white-space: nowrap;
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
 `;

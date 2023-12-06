@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as c from "./QuizSearchPageCSS.js";
 import TopBar from "../components/TopBar.js";
 import QuizCard from "../components/QuizCard.js";
 import DifficultyRangeSlider from "../components/DifficultyRangeSlider.js";
+import { Link } from 'react-router-dom';
 
 const QuizSearchPage = () => {
 	function QuizList() {
@@ -18,7 +20,7 @@ const QuizSearchPage = () => {
 			<c.Entire>
 				<TopBar />
 				<c.Content>
-					<c.PageTitle>{/*<DifficultyRangeSlider />*/}</c.PageTitle>
+					{/* <c.PageTitle><DifficultyRangeSlider /></c.PageTitle> */}
 					<c.SortBar>
 						<c.SortDiv>
 							<c.SortText>정렬 : </c.SortText>
@@ -40,6 +42,18 @@ const QuizSearchPage = () => {
 						<c.SolvedAmountText>푼 사람 수</c.SolvedAmountText>
 					</c.QuizListTopBar>
 					<c.QuizContent>{QuizList()}</c.QuizContent>
+					<Link
+						to="/quizinsert"
+						style={
+							({ textDecoration: "none" },
+								{ width: "auto" })
+						}>
+						<c.QuizInsertBtn>
+							<c.QuizInsertText>
+								문제 작성
+							</c.QuizInsertText>
+						</c.QuizInsertBtn>
+					</Link>
 				</c.Content>
 			</c.Entire>
 		</div>

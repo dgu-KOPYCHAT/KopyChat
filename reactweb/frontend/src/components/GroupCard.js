@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
-import styled, { css } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
-import DifficultyImage from "../images/Difficulty/prototype.png";
+// import DifficultyImage from "../images/Difficulty/prototype.png";
 
 const Entire = styled.div`
 	width: 95%;

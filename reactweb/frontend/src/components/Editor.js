@@ -2,7 +2,6 @@ import React from "react";
 import AceEditor from "react-ace";
 import { useEffect, useRef, useState } from "react";
 import * as c from "./CSS/EditorCSS.js";
-import styled from "styled-components";
 // import "./Editor.css";
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-monokai";
@@ -16,28 +15,18 @@ import "ace-builds/src-noconflict/theme-solarized_dark";
 import "ace-builds/src-noconflict/theme-solarized_light";
 import "ace-builds/src-noconflict/theme-terminal";
 
-const javaFilePath = process.env.PUBLIC_URL + "example.java";
-let example = "";
-
-fetch(javaFilePath)
-	.then((response) => response.text())
-	.then((data) => {
-		example = data;
-		console.log(data);
-	})
-	.catch((error) => {
-		console.error("Cannot load java example.", error);
-	});
-
 const Editor = (props) => {
 	const editorRef = useRef(null);
 
 	useEffect(() => {
-		// AceEditor가 마운트된 이후에 resize 메서드를 호출
 		if (editorRef.current) {
 			editorRef.current.editor.resize();
 		}
 	}, []);
+
+	const handleChange = (val) => {
+		props.onChange(val);
+	}
 
 	return (
 		<div style={{ width: "100%", height: "100%" }}>
@@ -48,8 +37,7 @@ const Editor = (props) => {
 					theme={props.theme}
 					name="my-editor"
 					fontSize={24}
-					value={example}
-					onChange={props.onChange}
+					onChange={handleChange}
 					style={{
 						width: "100%",
 						height: "100%",

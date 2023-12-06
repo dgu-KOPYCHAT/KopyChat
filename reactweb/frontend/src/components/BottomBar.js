@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import * as c from "./CSS/BottomBarCSS.js";
 
 const BottomBar = () => {

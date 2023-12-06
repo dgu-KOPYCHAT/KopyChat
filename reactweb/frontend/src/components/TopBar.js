@@ -1,11 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './CSS/TopBar.css';
 import * as c from "./CSS/TopBarCSS.js";
 import * as s from "./CSS/ShareAssetCSS.js";
 import LogoImage from "../images/kopychat.png";
 import SearchIcon from "../images/search_icon_gray.png";
 
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 const TopBar = () => {
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+	useEffect(() => {
+		axios
+			.post(
+				"http://localhost:3000/user/auth/silent-refresh",
+				{},
+				{
+					withCredentials: true,
+				}
+			)
+			.then((res) => {
+				console.log(res);
+				const { accessToken } = res.data;
+				console.log(accessToken);
+				axios.defaults.headers.common[
+					"Authorization"
+				] = `Bearer ${accessToken}`;
+				setIsLoggedIn(true);
+			});
+	}, []);
+
+	const handleGoogleLogin = async () => {
+        window.location.href = "http://localhost:8000/user/auth/google";
+    };
+
 	return (
 		<div>
 			<c.TopBar>
@@ -26,10 +56,7 @@ const TopBar = () => {
 							<s.BoldText size={"mdlg"}>문제</s.BoldText>
 						</c.TopMenu>
 					</Link>
-					<Link
-						to="/quizlist/main"
-						style={{ textDecoration: "none" }}
-					>
+					<Link to="/quizlist/main" style={{ textDecoration: "none" }}>
 						<c.TopMenu>
 							<s.BoldText size={"mdlg"}>문제집</s.BoldText>
 						</c.TopMenu>
@@ -53,18 +80,20 @@ const TopBar = () => {
 						<s.Image size={"sm"} src={SearchIcon}></s.Image>
 					</c.TopMenu>
 				</c.LeftSide>
+
 				<c.RightSide>
-					<Link to="/login" style={{ textDecoration: "none" }}>
+					<div onClick={handleGoogleLogin} style={{ textDecoration: "none" }}>
 						<c.LoginMenu>
 							<s.BoldText size={"mdlg"}>로그인</s.BoldText>
 						</c.LoginMenu>
-					</Link>
+					</div>
 					<Link to="/user" style={{ textDecoration: "none" }}>
 						<c.TopMenu>
 							<s.BoldText size={"mdlg"}>마이페이지</s.BoldText>
 						</c.TopMenu>
 					</Link>
 				</c.RightSide>
+				<input value={`${isLoggedIn}`}></input>
 			</c.TopBar>
 			<s.HrLine />
 		</div>

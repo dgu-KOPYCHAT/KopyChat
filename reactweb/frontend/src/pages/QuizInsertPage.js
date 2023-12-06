@@ -2,12 +2,11 @@ import React from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import * as c from "./CSS/QuizInsertPageCSS.js";
 import TopBar from "../components/TopBar.js";
-import GroupCard from "../components/GroupCard.js";
-import Post from "../components/Post.js";
-import DifficultyImage from "../images/Difficulty/prototype.png";
+// import GroupCard from "../components/GroupCard.js";
+// import Post from "../components/Post.js";
+// import DifficultyImage from "../images/Difficulty/prototype.png";
 //편집기와 백엔드
 import { useState, useEffect } from 'react';
-import "./Board.css";
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import ReactHtmlParser from 'react-html-parser';

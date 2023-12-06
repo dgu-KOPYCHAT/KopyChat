@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import * as c from "./CSS/BoardPageCSS.js";
 import * as s from "../components/CSS/ShareAssetCSS.js";
 import TopBar from "../components/TopBar.js";

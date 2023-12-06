@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import TopBar from "../components/TopBar";
-import EditorTopBar from "../components/EditorTopBar";
 import Editor from "../components/Editor.js";
 import EditorResult from "../components/EditorResult.js";
 import Post from "../components/Post.js";
@@ -21,23 +20,26 @@ const EditorPage = () => {
 	}
 
 	const handleCodeChange = (newcode) => {
-		setResult(newcode);
 		setCode(newcode);
 	}
 
+	const resultRef = useRef(null);
+
 	const InstantJudge = async () => {
-		setResult("~~");
-		const code = "";
-		fetch('http://localhost:8000/compile',{
+		if(resultRef.current) {
+			resultRef.current.setExpand();
+		}
+		setResult("컴파일 중입니다...");
+		await fetch('http://localhost:8080/compile', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'text/plain',
                 },
-                body: {Code},
+                body: Code,
             })
             .then(res => res.text())
-            .then(data => {setResult("resu");})
-            .catch(err => {console.error("Error : ", err);});
+            .then(data => {setResult(data)})
+            .catch(err => {setResult(err)});
 	};
 
 	return (
@@ -80,14 +82,14 @@ const EditorPage = () => {
 					<c.QuizEditor>
 						<c.EditorSetting>
 							<ThemeSelectBox onSelect={handleSelect} />
-							<c.InstantBtn onclick={InstantJudge}>
+							<c.InstantBtn onClick={InstantJudge}>
 								<c.InstantBtnText>
 									제출 →
 								</c.InstantBtnText>
 							</c.InstantBtn>
 						</c.EditorSetting>
 						<Editor theme={Selected} onChange={handleCodeChange} />
-						<EditorResult result={Result} />
+						<EditorResult result={Result} ref={resultRef} />
 					</c.QuizEditor>
 				</c.QuizPage>
 			</c.Entire>

@@ -13,9 +13,9 @@ router.get("/get", async (req, res) => {
 });
 
 router.post("/insert", async (req, res) => {
-    const { title, content } = req.body;
+    const { num, title, content, nickname } = req.body;
     try {
-        await db.board.create({ title, content }); // Create a new record
+        await db.board.create({ num, title, content, nickname }); // Create a new record
         res.send('success!');
     } catch (err) {
         console.error('Error:', err);

@@ -165,6 +165,7 @@ export const InstantBtn = styled.button`
 	border: 1px solid #181824;
 	background-color: #404068;
 	&:hover {
+		cursor: pointer;
 		background-color: #6e6eb3;
 	}
 `;

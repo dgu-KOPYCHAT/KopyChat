@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import AceEditor from "react-ace";
 
 export const Entire = styled.div`

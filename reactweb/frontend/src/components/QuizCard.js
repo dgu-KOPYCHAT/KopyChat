@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import styled, { css } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 import DifficultyIcon from "../components/DifficultyIcon.js";
 

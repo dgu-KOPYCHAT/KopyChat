@@ -7,12 +7,10 @@ import QuizListPage from "./pages/QuizListPage";
 import QuizPage from "./pages/QuizPage";
 import QuizInsertPage from "./pages/QuizInsertPage";
 import GroupListPage from "./pages/GroupListPage";
-import LoginPage from "./pages/LoginPage";
 import UserPage from "./pages/UserPage";
 import QuizSearchPage from "./pages/QuizSearchPage";
 import BoardPage from "./pages/BoardPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import Navbar from "./components/Navbar";
 import Board from "./pages/Board";
 
 import { useEffect, useState } from "react";

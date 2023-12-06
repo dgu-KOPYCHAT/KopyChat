@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as c from "./QuizSearchPageCSS.js";
 import TopBar from "../components/TopBar.js";
 import QuizCard from "../components/QuizCard.js";
@@ -19,7 +20,7 @@ const QuizSearchPage = () => {
 			<c.Entire>
 				<TopBar />
 				<c.Content>
-					<c.PageTitle>{/*<DifficultyRangeSlider />*/}</c.PageTitle>
+					{/* <c.PageTitle><DifficultyRangeSlider /></c.PageTitle> */}
 					<c.SortBar>
 						<c.SortDiv>
 							<c.SortText>정렬 : </c.SortText>
@@ -42,7 +43,7 @@ const QuizSearchPage = () => {
 					</c.QuizListTopBar>
 					<c.QuizContent>{QuizList()}</c.QuizContent>
 					<Link
-						to="/quiz/insert"
+						to="/quizinsert"
 						style={
 							({ textDecoration: "none" },
 								{ width: "auto" })

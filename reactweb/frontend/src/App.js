@@ -5,6 +5,7 @@ import EditorPage from "./pages/EditorPage";
 import QuizListMainPage from "./pages/QuizListMainPage";
 import QuizListPage from "./pages/QuizListPage";
 import QuizPage from "./pages/QuizPage";
+import QuizInsertPage from "./pages/QuizInsertPage";
 import GroupListPage from "./pages/GroupListPage";
 import LoginPage from "./pages/LoginPage";
 import UserPage from "./pages/UserPage";
@@ -49,11 +50,9 @@ function App() {
 					<Route path="/editor" element={<EditorPage />} />
 					<Route path="/quizsearch" element={<QuizSearchPage />} />
 					<Route path="/quizlist" element={<QuizListPage />} />
-					<Route
-						path="/quizlist/main"
-						element={<QuizListMainPage />}
-					/>
+					<Route path="/quizlist/main" element={<QuizListMainPage />} />
 					<Route path="/quiz" element={<QuizPage />} />
+					<Route path="/quizinsert" element={<QuizInsertPage />} />
 					<Route path="/grouplist" element={<GroupListPage />} />
 					<Route path="/login" element={<LoginPage />} />
 					<Route path="/user" element={<UserPage />} />

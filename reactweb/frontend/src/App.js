@@ -22,7 +22,7 @@ function App() {
 	useEffect(() => {
 		axios
 			.post(
-				"http://localhost:3000/user/auth/silent-refresh",
+				"http://localhost:8000/user/auth/silent-refresh",
 				{},
 				{
 					withCredentials: true,
@@ -40,8 +40,6 @@ function App() {
 	}, []);
 	return (
 		<div>
-			{isLoggedIn && <nav>로그인 되었습니다.</nav>}
-
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<MainPage />} />

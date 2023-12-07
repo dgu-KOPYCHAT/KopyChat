@@ -11,6 +11,7 @@ import axios from "axios";
 
 const TopBar = () => {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [authToken, setAuthToken] = useState(""); // Added state for authToken
 
 	useEffect(() => {
 		axios
@@ -35,6 +36,20 @@ const TopBar = () => {
 	const handleGoogleLogin = async () => {
         window.location.href = "http://localhost:8000/user/auth/google";
     };
+
+    const handleLogout = async () => {
+        setAuthToken("");
+        try {
+            await axios.post("http://localhost:8000/user/logout", {}, { withCredentials: true });
+			alert("로그아웃에 성공했습니다.");
+            setIsLoggedIn(false); 
+        } catch (error) {
+            console.error("Logout failed", error);
+            alert("로그아웃에 실패했습니다.");
+        }
+    };
+	
+    const handleClick = isLoggedIn ? handleLogout : handleGoogleLogin;
 
 	return (
 		<div>
@@ -82,7 +97,7 @@ const TopBar = () => {
 				</c.LeftSide>
 
 				<c.RightSide>
-				<div onClick={handleGoogleLogin} style={{ textDecoration: "none" }}>
+				<div onClick={handleClick} style={{ textDecoration: "none" }}>
 					<c.LoginMenu>
 						{isLoggedIn 
 							? <s.BoldText size={"mdlg"}>로그아웃</s.BoldText> // Shows when user is logged in
@@ -97,7 +112,6 @@ const TopBar = () => {
 						</c.TopMenu>
 					</Link>
 				</c.RightSide>
-				<input value={`${isLoggedIn}`}></input>
 			</c.TopBar>
 			<s.HrLine />
 		</div>

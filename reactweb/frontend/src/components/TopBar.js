@@ -15,7 +15,7 @@ const TopBar = () => {
 	useEffect(() => {
 		axios
 			.post(
-				"http://localhost:3000/user/auth/silent-refresh",
+				"http://localhost:8000/user/auth/silent-refresh",
 				{},
 				{
 					withCredentials: true,
@@ -82,11 +82,15 @@ const TopBar = () => {
 				</c.LeftSide>
 
 				<c.RightSide>
-					<div onClick={handleGoogleLogin} style={{ textDecoration: "none" }}>
-						<c.LoginMenu>
-							<s.BoldText size={"mdlg"}>로그인</s.BoldText>
-						</c.LoginMenu>
-					</div>
+				<div onClick={handleGoogleLogin} style={{ textDecoration: "none" }}>
+					<c.LoginMenu>
+						{isLoggedIn 
+							? <s.BoldText size={"mdlg"}>로그아웃</s.BoldText> // Shows when user is logged in
+							: <s.BoldText size={"mdlg"}>로그인</s.BoldText>   // Shows when user is not logged in
+						}
+					</c.LoginMenu>
+				</div>
+
 					<Link to="/user" style={{ textDecoration: "none" }}>
 						<c.TopMenu>
 							<s.BoldText size={"mdlg"}>마이페이지</s.BoldText>

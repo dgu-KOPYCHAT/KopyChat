@@ -17,11 +17,13 @@ function Board() {
 
 	const [viewContent, setViewContent] = useState([]);
 
+	/* 게시판 불러오는 코드 (딜레이 없이 계속 불러오므로 주의)
 	useEffect(() => {
 		Axios.get("http://localhost:8000/board/get").then((response) => {
 			setViewContent(response.data);
 		});
 	}, [viewContent]);
+	*/
 
 	const submitReview = () => {
 		Axios.post("http://localhost:8000/board/insert", {
@@ -52,17 +54,20 @@ function Board() {
 
 	return (
 		<c.Entire>
-			<div className="App">
-				<TopBar /> {/* This line renders the TopBar */}
-				<h1>Movie Review</h1>
-				<div className="form-wrapper">
-					<input
-						className="title-input"
-						type="text"
-						placeholder="제목"
-						onChange={getValue}
-						name="title"
-					/>
+			<TopBar /> {/* This line renders the TopBar */}
+			<div className="form-wrapper">
+				<c.TitleInput
+					type="text"
+					placeholder="제목"
+					onChange={getValue}
+					name="title"
+				/>
+				<div
+					style={{
+						color: "white",
+						marginBottom: "3vh",
+					}}
+				>
 					<CKEditor
 						editor={ClassicEditor}
 						data=""
@@ -84,12 +89,22 @@ function Board() {
 						onFocus={(event, editor) => {
 							console.log("Focus.", editor);
 						}}
+						config={{
+							// 에디터 구성 옵션
+							fontFamily: {
+								options: [
+									"Maplestory Light, sans-serif",
+									"Maplestory Bold, sans-serif",
+								],
+								value: "Maplestory Light, sans-serif", // 초기 폰트를 여기에 지정합니다.
+							},
+						}}
 					/>
 				</div>
-				<button className="submit-button" onClick={submitReview}>
-					입력
-				</button>
 			</div>
+			<c.InstantBtn>
+				<c.InstantBtnText onClick={submitReview}>작성</c.InstantBtnText>
+			</c.InstantBtn>
 		</c.Entire>
 	);
 }

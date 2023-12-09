@@ -10,6 +10,7 @@ import GroupListPage from "./pages/GroupListPage";
 import UserPage from "./pages/UserPage";
 import QuizSearchPage from "./pages/QuizSearchPage";
 import BoardPage from "./pages/BoardPage";
+import PostPage from "./pages/PostPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Board from "./pages/Board";
 
@@ -48,16 +49,20 @@ function App() {
 
 					<Route path="/quizsearch" element={<QuizSearchPage />} />
 					<Route path="/quizlist" element={<QuizListPage />} />
-					<Route path="/quizlist/main" element={<QuizListMainPage />} />
+					<Route
+						path="/quizlist/main"
+						element={<QuizListMainPage />}
+					/>
 					<Route path="/quiz" element={<QuizPage />} />
 					<Route path="/quizinsert" element={<QuizInsertPage />} />
-					
+
 					<Route path="/postwrite" element={<Board />} />
 					<Route path="/board" element={<BoardPage />} />
-					
+					<Route path="/post" element={<PostPage />} />
+
 					<Route path="/editor" element={<EditorPage />} />
 					<Route path="/user" element={<UserPage />} />
-					
+
 					<Route path="/grouplist" element={<GroupListPage />} />
 				</Routes>
 			</BrowserRouter>

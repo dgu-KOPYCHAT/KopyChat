@@ -46,8 +46,8 @@ const QuizPage = () => {
 					</c.Info>
 				</c.InfoBarLeft>
 				<c.InfoBarRight>
-					<c.Info marginRight={"1.5vw"}>
-						<s.BoldText size={"smmd"} marginRight={"1vw"}>
+					<c.Info marginright={"1.5vw"}>
+						<s.BoldText size={"smmd"} marginright={"1vw"}>
 							정답자 / 시도 횟수
 						</s.BoldText>
 						<s.BoldText size={"lg"}>1234 / 5678</s.BoldText>

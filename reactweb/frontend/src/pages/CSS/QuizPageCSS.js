@@ -24,8 +24,8 @@ export const Entire = styled.div`
 
 export const ContentDiv = styled.div`
 	width: 100%;
-	height: auto;
-	margin-bottom: 10vh;
+	height: 90vh;
+	margin-bottom: 5vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -42,7 +42,7 @@ export const IndexDiv = styled.div`
 
 export const Content = styled.div`
 	width: 60%;
-	height: auto;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -58,7 +58,7 @@ export const ExplorerDiv = styled.div`
 
 export const FixedQuizInfo = styled.div`
 	width: 100%;
-	height: 15vh;
+	height: 20%;
 	margin-top: 5vh;
 	margin-bottom: 1vh;
 	display: flex;
@@ -150,7 +150,7 @@ export const Info = styled.div`
 	width: auto;
 	margin-left: 1vw; /* 1vw = 19.2px */
 	margin-right: 1vw; /* 1vw = 19.2px */
-	margin-right: ${(props) => props.marginRight};
+	margin-right: ${(props) => props.marginright};
 	height: 100%;
 	display: flex;
 	flex-direction: row;
@@ -160,7 +160,7 @@ export const Info = styled.div`
 
 export const PostDiv = styled.div`
 	width: 100%;
-	height: 80%;
+	height: 70%;
 	margin-top: 1vh;
 	margin-bottom: 1vh;
 	display: flex;

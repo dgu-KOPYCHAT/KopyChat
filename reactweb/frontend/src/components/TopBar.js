@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './CSS/TopBar.css';
+import "./CSS/TopBar.css";
 import * as c from "./CSS/TopBarCSS.js";
 import * as s from "./CSS/ShareAssetCSS.js";
 import LogoImage from "../images/kopychat.png";
@@ -11,7 +11,7 @@ import axios from "axios";
 
 const TopBar = () => {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [authToken, setAuthToken] = useState(""); // Added state for authToken
+	const [authToken, setAuthToken] = useState(""); // Added state for authToken
 
 	useEffect(() => {
 		axios
@@ -34,22 +34,26 @@ const TopBar = () => {
 	}, []);
 
 	const handleGoogleLogin = async () => {
-        window.location.href = "http://localhost:8000/user/auth/google";
-    };
+		window.location.href = "http://localhost:8000/user/auth/google";
+	};
 
-    const handleLogout = async () => {
-        setAuthToken("");
-        try {
-            await axios.post("http://localhost:8000/user/logout", {}, { withCredentials: true });
+	const handleLogout = async () => {
+		setAuthToken("");
+		try {
+			await axios.post(
+				"http://localhost:8000/user/logout",
+				{},
+				{ withCredentials: true }
+			);
 			alert("로그아웃에 성공했습니다.");
-            setIsLoggedIn(false); 
-        } catch (error) {
-            console.error("Logout failed", error);
-            alert("로그아웃에 실패했습니다.");
-        }
-    };
-	
-    const handleClick = isLoggedIn ? handleLogout : handleGoogleLogin;
+			setIsLoggedIn(false);
+		} catch (error) {
+			console.error("Logout failed", error);
+			alert("로그아웃에 실패했습니다.");
+		}
+	};
+
+	const handleClick = isLoggedIn ? handleLogout : handleGoogleLogin;
 
 	return (
 		<div>
@@ -60,8 +64,8 @@ const TopBar = () => {
 							<s.Image
 								src={LogoImage}
 								size={"lg"}
-								marginBottom={"5px"}
-								marginRight={"10px"}
+								marginbottom={"5px"}
+								marginright={"10px"}
 							></s.Image>
 							<s.BoldText size={"lgxl"}>KOPYCHAT</s.BoldText>
 						</c.Logo>
@@ -71,7 +75,10 @@ const TopBar = () => {
 							<s.BoldText size={"mdlg"}>문제</s.BoldText>
 						</c.TopMenu>
 					</Link>
-					<Link to="/quizlist/main" style={{ textDecoration: "none" }}>
+					<Link
+						to="/quizlist/main"
+						style={{ textDecoration: "none" }}
+					>
 						<c.TopMenu>
 							<s.BoldText size={"mdlg"}>문제집</s.BoldText>
 						</c.TopMenu>
@@ -97,14 +104,24 @@ const TopBar = () => {
 				</c.LeftSide>
 
 				<c.RightSide>
-				<div onClick={handleClick} style={{ textDecoration: "none" }}>
-					<c.LoginMenu>
-						{isLoggedIn 
-							? <s.BoldText size={"mdlg"}>로그아웃</s.BoldText> // Shows when user is logged in
-							: <s.BoldText size={"mdlg"}>로그인</s.BoldText>   // Shows when user is not logged in
-						}
-					</c.LoginMenu>
-				</div>
+					<div
+						onClick={handleClick}
+						style={{ textDecoration: "none" }}
+					>
+						<c.LoginMenu>
+							{
+								isLoggedIn ? (
+									<s.BoldText size={"mdlg"}>
+										로그아웃
+									</s.BoldText> // Shows when user is logged in
+								) : (
+									<s.BoldText size={"mdlg"}>
+										로그인
+									</s.BoldText>
+								) // Shows when user is not logged in
+							}
+						</c.LoginMenu>
+					</div>
 
 					<Link to="/user" style={{ textDecoration: "none" }}>
 						<c.TopMenu>

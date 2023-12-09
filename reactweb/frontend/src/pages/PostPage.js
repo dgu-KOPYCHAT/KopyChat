@@ -1,6 +1,6 @@
 import React from "react";
-import * as c from "./PostPageCSS.js";
-import * as s from "../components/ShareAssetCSS.js";
+import * as c from "./CSS/PostPageCSS.js";
+import * as s from "../components/CSS/ShareAssetCSS.js";
 import TopBar from "../components/TopBar.js";
 import Post from "../components/Post.js";
 import CommentIcon from "../images/comment_icon.png";
@@ -25,12 +25,18 @@ const PostPage = () => {
 								<s.VrLine />
 								<s.LightText size={"lg"}>▲ 0</s.LightText>
 								<s.VrLine />
-								<s.Image src={CommentIcon} size={"sm"} />
+								<s.Image
+									src={CommentIcon}
+									size={"sm"}
+									marginright={"0px"}
+								/>
 								<s.LightText size={"lg"}>0</s.LightText>
 							</c.PostTitleBottomDiv>
 						</c.PostTitleDiv>
 						<s.HrLine />
-						<Post />
+						<c.PostDiv>
+							<Post />
+						</c.PostDiv>
 					</c.Content>
 				</c.ContentDiv>
 			</c.Entire>

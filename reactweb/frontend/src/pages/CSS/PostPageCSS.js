@@ -22,26 +22,10 @@ export const Entire = styled.div`
 	}
 `;
 
-export const HrLine = styled.hr`
-	width: 100%;
-	height: 0.2px;
-	margin-top: -0.2px;
-	border: 0;
-	background-color: #7f7f7f3f;
-`;
-
-export const VrLine = styled.hr`
-	width: 0.2px;
-	height: 50%;
-	margin: 0 1%;
-	border: 0;
-	background-color: #7f7f7f3f;
-`;
-
 export const ContentDiv = styled.div`
 	width: 100%;
-	height: auto;
-	margin-bottom: 10vh;
+	height: 100%;
+	margin-bottom: 2vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -58,7 +42,7 @@ export const IndexDiv = styled.div`
 
 export const Content = styled.div`
 	width: 60%;
-	height: auto;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -66,8 +50,8 @@ export const Content = styled.div`
 
 export const PostTitleDiv = styled.div`
 	width: 100%;
-	height: 12vh;
-	margin-top: 10vh;
+	height: 20%;
+	margin-top: 3vh;
 	margin-bottom: 1vh;
 	display: flex;
 	flex-direction: column;
@@ -110,9 +94,9 @@ export const PostInfoText = styled.span`
 	-webkit-user-select: none;
 `;
 
-export const PostContent = styled.div`
+export const PostDiv = styled.div`
 	width: 100%;
-	height: auto;
+	height: 70%;
 	margin-top: 1vh;
 	margin-bottom: 1vh;
 	display: flex;

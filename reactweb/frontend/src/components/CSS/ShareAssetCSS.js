@@ -49,10 +49,10 @@ export const Image = styled.img`
 
 	margin: 0px 0.5vw;
 
-	margin-top: ${(props) => props.marginTop};
-	margin-bottom: ${(props) => props.marginBottom};
-	margin-left: ${(props) => props.marginLeft};
-	margin-right: ${(props) => props.marginRight};
+	margin-top: ${(props) => props.margintop};
+	margin-bottom: ${(props) => props.marginbottom};
+	margin-left: ${(props) => props.marginleft};
+	margin-right: ${(props) => props.marginright};
 
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
@@ -67,8 +67,8 @@ export const BoldText = styled.span`
 	width: ${(props) => props.width};
 
 	margin: 0 0.5vw;
-	margin-left: ${(props) => props.marginLeft};
-	margin-right: ${(props) => props.marginRight};
+	margin-left: ${(props) => props.marginleft};
+	margin-right: ${(props) => props.marginright};
 
 	font-size: var(--font-size-${(props) => props.size});
 	font-family: var(--font-Default-Bold);
@@ -84,8 +84,8 @@ export const LightText = styled.span`
 	width: ${(props) => props.width};
 
 	margin: 0 0.5vw;
-	margin-left: ${(props) => props.marginLeft};
-	margin-right: ${(props) => props.marginRight};
+	margin-left: ${(props) => props.marginleft};
+	margin-right: ${(props) => props.marginright};
 
 	font-size: var(--font-size-${(props) => props.size});
 	font-family: var(--font-Default-Light);

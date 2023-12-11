@@ -17,6 +17,12 @@ export const VrLine = styled.hr`
 	background-color: #7f7f7f3f;
 `;
 
+export const EmptyDiv = styled.div`
+	margin: 3vh 0;
+	margin-top: ${(props) => props.margintop};
+	margin-bottom: ${(props) => props.marginbottom};
+`;
+
 /* 
     xxl : 5vw = 96px, 9vh = 97.2px
     xl : 4vw = 76.8px, 7vh = 75.6px 
@@ -67,6 +73,8 @@ export const BoldText = styled.span`
 	width: ${(props) => props.width};
 
 	margin: 0 0.5vw;
+	margin-top: ${(props) => props.margintop};
+	margin-bottom: ${(props) => props.marginbottom};
 	margin-left: ${(props) => props.marginleft};
 	margin-right: ${(props) => props.marginright};
 
@@ -84,6 +92,8 @@ export const LightText = styled.span`
 	width: ${(props) => props.width};
 
 	margin: 0 0.5vw;
+	margin-top: ${(props) => props.margintop};
+	margin-bottom: ${(props) => props.marginbottom};
 	margin-left: ${(props) => props.marginleft};
 	margin-right: ${(props) => props.marginright};
 

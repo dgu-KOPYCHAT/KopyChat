@@ -55,20 +55,19 @@ function Board() {
 	return (
 		<c.Entire>
 			<TopBar /> {/* This line renders the TopBar */}
-			<div className="form-wrapper">
-				<c.TitleInput
-					type="text"
-					placeholder="제목"
-					onChange={getValue}
-					name="title"
-				/>
-				<div
-					style={{
-						color: "white",
-						marginBottom: "3vh",
-					}}
-				>
-					<CKEditor
+			<c.Content>
+				<c.PageTitle>
+					<c.PageTitleText>글 작성</c.PageTitleText>
+				</c.PageTitle>
+
+				<div className="form-wrapper">
+					<c.TitleInput
+						type="text"
+						placeholder="제목"
+						onChange={getValue}
+						name="title"
+					/>
+					<CKEditor // 에디터 크기는 board.css에서 40vh로 설정되어 있음
 						editor={ClassicEditor}
 						data=""
 						onReady={(editor) => {
@@ -89,22 +88,15 @@ function Board() {
 						onFocus={(event, editor) => {
 							console.log("Focus.", editor);
 						}}
-						config={{
-							// 에디터 구성 옵션
-							fontFamily: {
-								options: [
-									"Maplestory Light, sans-serif",
-									"Maplestory Bold, sans-serif",
-								],
-								value: "Maplestory Light, sans-serif", // 초기 폰트를 여기에 지정합니다.
-							},
-						}}
 					/>
 				</div>
-			</div>
-			<c.InstantBtn>
-				<c.InstantBtnText onClick={submitReview}>작성</c.InstantBtnText>
-			</c.InstantBtn>
+
+				<c.InstantBtn>
+					<c.InstantBtnText onClick={submitReview}>
+						작성
+					</c.InstantBtnText>
+				</c.InstantBtn>
+			</c.Content>
 		</c.Entire>
 	);
 }

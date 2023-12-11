@@ -12,7 +12,7 @@ import axios from "axios";
 const TopBar = () => {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 	const [authToken, setAuthToken] = useState(""); // Added state for authToken
-
+	const [nickName, setNickName] = useState("");
 	useEffect(() => {
 		axios
 			.post(
@@ -45,7 +45,8 @@ const TopBar = () => {
 				{},
 				{ withCredentials: true }
 			);
-			alert("로그아웃에 성공했습니다.");
+			// alert("로그아웃에 성공했습니다.");
+			window.location.href = "http://localhost:8000/user/auth/google";
 			setIsLoggedIn(false);
 		} catch (error) {
 			console.error("Logout failed", error);

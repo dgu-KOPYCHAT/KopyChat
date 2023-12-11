@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import * as c from "./CSS/QuizSearchPageCSS.js";
 import TopBar from "../components/TopBar.js";
 import QuizCard from "../components/QuizCard.js";
+import axios from "axios";
 // import DifficultyRangeSlider from "../components/DifficultyRangeSlider.js";
 
 const QuizSearchPage = () => {
-	function QuizList() {
-		let result = [];
-		for (let i = 0; i < 25; i++) {
-			result.push(<QuizCard key={i} />);
-		}
-		return result;
-	}
+	const [quizs,setQuizs] = useState([]);
+	useEffect(() => {
+		const fetchQuizs = async () => {
+			try {
+				axios.get("http://localhost:8000/quiz/get").then((res)=>{
+					setQuizs(res.data);
+				});
+			} catch(error) {
+				console.error('Error fetching data:', error);
+			}
+		};
+		fetchQuizs();
+	}, [])
 
 	return (
 		<div>
@@ -40,7 +47,11 @@ const QuizSearchPage = () => {
 						<c.QuizTitleText>제목</c.QuizTitleText>
 						<c.SolvedAmountText>푼 사람 수</c.SolvedAmountText>
 					</c.QuizListTopBar>
-					<c.QuizContent>{QuizList()}</c.QuizContent>
+					<c.QuizContent>
+						{quizs.map((item,index) => (
+							<QuizCard name={item.title} key={index} />
+						))}
+					</c.QuizContent>
 					<Link
 						to="/quizinsert"
 						style={

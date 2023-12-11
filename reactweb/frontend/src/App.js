@@ -18,27 +18,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 function App() {
-	const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-	useEffect(() => {
-		axios
-			.post(
-				"http://localhost:8000/user/auth/silent-refresh",
-				{},
-				{
-					withCredentials: true,
-				}
-			)
-			.then((res) => {
-				console.log(res);
-				const { accessToken } = res.data;
-				console.log(accessToken);
-				axios.defaults.headers.common[
-					"Authorization"
-				] = `Bearer ${accessToken}`;
-				setIsLoggedIn(true);
-			});
-	}, []);
 	return (
 		<div>
 			<BrowserRouter>

@@ -4,8 +4,10 @@ import * as s from "../components/CSS/ShareAssetCSS.js";
 import TopBar from "../components/TopBar.js";
 import Post from "../components/Post.js";
 import CommentIcon from "../images/comment_icon.png";
+import { useParams } from "react-router-dom";
 
 const PostPage = () => {
+	const { id } = useParams();
 	return (
 		<div>
 			<c.Entire>
@@ -34,9 +36,9 @@ const PostPage = () => {
 							</c.PostTitleBottomDiv>
 						</c.PostTitleDiv>
 						<s.HrLine />
-						<c.PostDiv>
+						{/* <c.PostDiv>
 							<Post />
-						</c.PostDiv>
+						</c.PostDiv> */}
 					</c.Content>
 				</c.ContentDiv>
 			</c.Entire>

@@ -1,13 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import * as c from "./CSS/QuizPageCSS.js";
 import * as s from "../components/CSS/ShareAssetCSS.js";
 import TopBar from "../components/TopBar.js";
 import Post from "../components/Post.js";
 import DifficultyIcon from "../components/DifficultyIcon.js";
+import axios from "axios";
 
 const QuizPage = () => {
+	const {id} = useParams();
+	const [quiz,setQuiz] = useState([]);
+	useEffect(() => {
+		const fetchQuiz = async () => {
+			try {
+				axios.get(`http://localhost:8000/quiz/get/${id}`).then((res)=>{
+					setQuiz(res.data);
+				});
+			} catch(error) {
+				console.error('Error fetching data:', error);
+			}
+		};
+		fetchQuiz();
+	}, [])
 	function PageTitle() {
+		
 		return (
 			<c.PageTitle>
 				<c.PageTitleLeft>
@@ -16,11 +32,11 @@ const QuizPage = () => {
 						level={"1"}
 						size={"md"}
 					/>
-					<s.BoldText size={"lg"}>문제 이름</s.BoldText>
+					<s.BoldText size={"lg"}>{quiz.title}</s.BoldText>
 				</c.PageTitleLeft>
 				<c.PageTitleRight>
 					<Link
-						to="/editor"
+						to={`/quizeditor/${id}`}
 						style={({ textDecoration: "none" }, { width: "auto" })}
 					>
 						<c.EditorBtn>
@@ -50,7 +66,7 @@ const QuizPage = () => {
 						<s.BoldText size={"smmd"} marginright={"1vw"}>
 							정답자 / 시도 횟수
 						</s.BoldText>
-						<s.BoldText size={"lg"}>1234 / 5678</s.BoldText>
+						<s.BoldText size={"lg"}>0 / 0</s.BoldText>
 					</c.Info>
 				</c.InfoBarRight>
 			</c.InfoBar>
@@ -70,7 +86,7 @@ const QuizPage = () => {
 							<s.HrLine />
 						</c.FixedQuizInfo>
 						<c.PostDiv>
-							<Post />
+							<Post quiz={quiz} />
 						</c.PostDiv>
 					</c.Content>
 				</c.ContentDiv>

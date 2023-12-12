@@ -59,7 +59,7 @@ function QuizCard(props) {
 	return (
 		<Entire>
 			<Link
-				to="/quiz"
+				to={`/quiz/${props.id}`}
 				style={{
 					textDecoration: "none",
 					width: "100%",

@@ -80,9 +80,9 @@ const TopBar = () => {
 						to="/quizlist/main"
 						style={{ textDecoration: "none" }}
 					>
-						<c.TopMenu>
+						{/* <c.TopMenu>
 							<s.BoldText size={"mdlg"}>문제집</s.BoldText>
-						</c.TopMenu>
+						</c.TopMenu> */}
 					</Link>
 					<Link to="/editor" style={{ textDecoration: "none" }}>
 						<c.TopMenu>

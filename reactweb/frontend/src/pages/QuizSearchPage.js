@@ -49,7 +49,7 @@ const QuizSearchPage = () => {
 					</c.QuizListTopBar>
 					<c.QuizContent>
 						{quizs.map((item,index) => (
-							<QuizCard name={item.title} key={index} />
+							<QuizCard id={item.id} name={item.title} />
 						))}
 					</c.QuizContent>
 					<Link

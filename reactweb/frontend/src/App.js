@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import EditorPage from "./pages/EditorPage";
+import IdleEditorPage from "./pages/IdleEditorPage";
 import QuizListMainPage from "./pages/QuizListMainPage";
 import QuizListPage from "./pages/QuizListPage";
 import QuizPage from "./pages/QuizPage";
@@ -24,7 +25,6 @@ function App() {
 				<Routes>
 					<Route path="/" element={<MainPage />} />
 					<Route path="/*" element={<NotFoundPage />} />
-					{/* <Route path="/login" element={<LoginPage />} /> */}
 
 					<Route path="/quizsearch" element={<QuizSearchPage />} />
 					<Route path="/quizlist" element={<QuizListPage />} />
@@ -32,14 +32,15 @@ function App() {
 						path="/quizlist/main"
 						element={<QuizListMainPage />}
 					/>
-					<Route path="/quiz" element={<QuizPage />} />
+					<Route path="/quiz/:id" element={<QuizPage />} />
+					<Route path="/quizeditor/:id" element={<EditorPage />} />
 					<Route path="/quizinsert" element={<QuizInsertPage />} />
 
 					<Route path="/postwrite" element={<Board />} />
 					<Route path="/board" element={<BoardPage />} />
-					<Route path="/post" element={<PostPage />} />
+					<Route path="/post/:id" element={<PostPage />} />
 
-					<Route path="/editor" element={<EditorPage />} />
+					<Route path="/editor" element={<IdleEditorPage />} />
 					<Route path="/user" element={<UserPage />} />
 
 					<Route path="/grouplist" element={<GroupListPage />} />

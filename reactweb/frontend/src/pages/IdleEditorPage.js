@@ -1,37 +1,31 @@
-import React, { useState, useRef, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useRef, useParams, useEffect } from "react";
 import TopBar from "../components/TopBar";
 import Editor from "../components/Editor.js";
 import EditorResult from "../components/EditorResult.js";
-import Post from "../components/Post.js";
 import * as c from "./CSS/EditorPageCSS.js";
+import styled from "styled-components";
 import DifficultyIcon from "../components/DifficultyIcon.js";
 import ClockImage from "../images/clock_icon.png";
 import MemoryImage from "../images/memory_icon.png";
 import FlagImage from "../images/flag_icon.png";
 import ThemeSelectBox from "../components/ThemeSelectBox.js";
-import axios from "axios";
 
-const EditorPage = () => {
-	const {id} = useParams();
-	const [quiz,setQuiz] = useState([]);
+const ExpandedEditor = styled.div`
+    width: 90%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
+
+const IdleEditorPage = () => {
+    let exCode = 'public class Main\n{\n    static void printGreetings(String name)\n    {\n        System.out.println("Hello, " + name + "!");\n    }\n\n    public static void main(String[] args)\n    {\n        printGreetings("KopyChat");\n    }\n}\n';
 
 	const [Selected, setSelected] = useState("monokai");
 	const [Result, setResult] = useState("");
-	const [Code, setCode] = useState("");
-
-	useEffect(() => {
-		const fetchQuiz = async () => {
-			try {
-				axios.get(`http://localhost:8000/quiz/get/${id}`).then((res)=>{
-					setQuiz(res.data);
-				});
-			} catch(error) {
-				console.error('Error fetching data:', error);
-			}
-		};
-		fetchQuiz();
-	}, [])
+	const [Code, setCode] = useState(exCode);
 
 	const handleSelect = (theme) => {
 		setSelected(theme);
@@ -43,12 +37,12 @@ const EditorPage = () => {
 
 	const resultRef = useRef(null);
 
-	const InstantJudge = async () => {
+	const InstantJudge = () => {
 		if(resultRef.current) {
 			resultRef.current.setExpand();
 		}
 		setResult("컴파일 중입니다...");
-		await fetch('http://localhost:8080/compile', {
+		fetch('http://localhost:8080/compile', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'text/plain',
@@ -65,7 +59,7 @@ const EditorPage = () => {
 			<c.Entire>
 				<TopBar />
 				<c.QuizPage>
-					<c.QuizInfo>
+					{/* <c.QuizInfo>
 						<c.TitleBar>
 							<c.QuizTitle>
 								<DifficultyIcon
@@ -95,9 +89,9 @@ const EditorPage = () => {
 							</c.InfoBarRight>
 						</c.InfoBar>
 						<c.HrLine />
-						<Post quiz={quiz} />
-					</c.QuizInfo>
-					<c.QuizEditor>
+						<Post quiz={quiz}/>
+					</c.QuizInfo> */}
+					<ExpandedEditor>
 						<c.EditorSetting>
 							<ThemeSelectBox onSelect={handleSelect} />
 							<c.InstantBtn onClick={InstantJudge}>
@@ -106,13 +100,13 @@ const EditorPage = () => {
 								</c.InstantBtnText>
 							</c.InstantBtn>
 						</c.EditorSetting>
-						<Editor theme={Selected} onChange={handleCodeChange} />
+						<Editor theme={Selected} onChange={handleCodeChange} defaultCode={Code}/>
 						<EditorResult result={Result} ref={resultRef} />
-					</c.QuizEditor>
+					</ExpandedEditor>
 				</c.QuizPage>
 			</c.Entire>
 		</div>
 	);
 };
 
-export default EditorPage;
+export default IdleEditorPage;

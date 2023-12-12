@@ -38,6 +38,7 @@ const Editor = (props) => {
 					name="my-editor"
 					fontSize={24}
 					onChange={handleChange}
+					defaultValue={props.defaultCode}
 					style={{
 						width: "100%",
 						height: "100%",

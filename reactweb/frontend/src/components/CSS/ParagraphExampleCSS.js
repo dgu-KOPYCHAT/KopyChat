@@ -132,7 +132,7 @@ export const ParagraphContentDiv = styled.div`
 
 export const ParagraphContentText = styled.textarea`
 	width: 100%;
-	height: auto;
+	height: 14vh;
 	box-sizing: border-box;
 	padding: 1vh 1vw; /* 1vh = 10.8px, 1vw = 19.2px */
 	font-size: var(--font-size-mdlg);

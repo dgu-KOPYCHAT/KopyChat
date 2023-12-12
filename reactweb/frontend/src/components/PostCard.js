@@ -93,7 +93,7 @@ function PostCard(props) {
 	return (
 		<Entire>
 			<Link
-				to="/post"
+				to={`/post/${props.id}`}
 				style={{
 					textDecoration: "none",
 					width: "100%",

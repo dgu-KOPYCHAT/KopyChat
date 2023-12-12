@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 import * as c from "./CSS/BoardPageCSS.js";
 import * as s from "../components/CSS/ShareAssetCSS.js";
@@ -7,15 +7,36 @@ import BottomBar from "../components/BottomBar.js";
 import PostCard from "../components/PostCard.js";
 import Post from "../components/Post.js";
 import DifficultyIcon from "../components/DifficultyIcon.js";
+import axios from "axios";
 
 const BoardPage = () => {
+	const [posts,setPosts] = useState([]);
+	useEffect(() => {
+		const fetchPosts = async () => {
+			try {
+				axios.get("http://localhost:8000/board/get").then((res)=>{
+					setPosts(res.data);
+				});
+			} catch(error) {
+				console.error('Error fetching data:', error);
+			}
+		};
+		fetchPosts();
+	}, [])
 	function QuizList() {
-		let result = [];
-		for (let i = 0; i < 25; i++) {
-			result.push(<PostCard key={i} />);
-		}
-		return result;
+		return posts.map((item,index) => (
+			<PostCard id={item.id} name={item.title} writer={item.nickname} createdDate={timeToString(Date(item.createdAt))}/>
+		));
 	}
+
+	const timeToString = () => new Intl.DateTimeFormat('ko-KR', {
+		hour: 'numeric', // 시간은 숫자로
+		minutes: 'numeric', // 분도 숫자로
+		day: 'numeric', // 날도 숫자로
+		month: 'long', // 달은 글자로
+		year: 'numeric', // 연도는 숫자로
+		weekday: 'long', // 요일은 글자로
+	  }).format();
 
 	return (
 		<div>

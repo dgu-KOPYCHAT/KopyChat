@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import * as c from "./CSS/PostPageCSS.js";
 import * as s from "../components/CSS/ShareAssetCSS.js";
 import TopBar from "../components/TopBar.js";
-import Post from "../components/Post.js";
 import CommentIcon from "../images/comment_icon.png";
 import { useParams } from "react-router-dom";
+import axios from "axios";
+import ReactHtmlParser from "react-html-parser";
 
 const PostPage = () => {
 	const { id } = useParams();
+	const [post,setPost] = useState([]);
+	useEffect(() => {
+		const fetchPost = async () => {
+			try {
+				axios.get(`http://localhost:8000/board/get/${id}`).then((res)=>{
+					setPost(res.data);
+				});
+			} catch(error) {
+				console.error('Error fetching data:', error);
+			}
+		};
+		fetchPost();
+	}, [])
+	const timeToString = () => new Intl.DateTimeFormat('ko-KR', {
+		hour: 'numeric', // 시간은 숫자로
+		minutes: 'numeric', // 분도 숫자로
+		day: 'numeric', // 날도 숫자로
+		month: 'long', // 달은 글자로
+		year: 'numeric', // 연도는 숫자로
+		weekday: 'long', // 요일은 글자로
+	  }).format();
 	return (
 		<div>
 			<c.Entire>
@@ -16,13 +38,13 @@ const PostPage = () => {
 					<c.Content>
 						<c.PostTitleDiv>
 							<c.PostTitleTopDiv>
-								<s.BoldText size={"xl"}>글 제목</s.BoldText>
+								<s.BoldText size={"xl"}>{`제목: ${post.title}`}</s.BoldText>
 							</c.PostTitleTopDiv>
 							<c.PostTitleBottomDiv>
-								<s.LightText size={"lg"}>글쓴이</s.LightText>
+								<s.LightText size={"lg"}>{post.nickname}</s.LightText>
 								<s.VrLine />
 								<s.LightText size={"lg"}>
-									2023-11-11 11:11
+									{timeToString(post.createdAt)}
 								</s.LightText>
 								<s.VrLine />
 								<s.LightText size={"lg"}>▲ 0</s.LightText>
@@ -36,6 +58,9 @@ const PostPage = () => {
 							</c.PostTitleBottomDiv>
 						</c.PostTitleDiv>
 						<s.HrLine />
+						<s.LightText>
+							{ReactHtmlParser(post.content)}
+						</s.LightText>
 						{/* <c.PostDiv>
 							<Post />
 						</c.PostDiv> */}

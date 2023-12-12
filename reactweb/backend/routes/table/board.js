@@ -12,6 +12,17 @@ router.get("/get", async (req, res) => {
     }
 });
 
+router.get("/get/:id", async (req, res) => {
+    const id = parseInt(req.params.id);
+    try {
+        const result = await db.board.findOne({where: {id:id}});
+        res.send(result);
+    } catch (err) {
+        console.error('Error:', err);
+        res.status(500).send('Error fetching data');
+    }
+});
+
 router.post("/insert", async (req, res) => {
     const { num, title, content, nickname } = req.body;
     try {

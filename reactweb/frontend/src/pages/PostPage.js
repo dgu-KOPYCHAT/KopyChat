@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import ReactHtmlParser from "react-html-parser";
 
+
 const PostPage = () => {
 	const { id } = useParams();
 	const [post, setPost] = useState([]);
@@ -23,16 +24,17 @@ const PostPage = () => {
 			}
 		};
 		fetchPost();
-	}, []);
-	const timeToString = () =>
-		new Intl.DateTimeFormat("ko-KR", {
-			hour: "numeric", // 시간은 숫자로
-			minute: "numeric", // 분도 숫자로
-			day: "numeric", // 날도 숫자로
-			month: "long", // 달은 글자로
-			year: "numeric", // 연도는 숫자로
-			weekday: "long", // 요일은 글자로
-		}).format();
+	}, [id]);
+    const timeToString = (date) => {
+        return new Intl.DateTimeFormat('ko-KR', {
+            hour: 'numeric', // 시간은 숫자로
+            minute: 'numeric', // 분도 숫자로 
+            day: 'numeric', // 날도 숫자로
+            month: 'long', // 달은 글자로
+            year: 'numeric', // 연도는 숫자로
+            weekday: 'long', // 요일은 글자로
+        }).format(new Date(date));
+    };
 	return (
 		<div>
 			<c.Entire>
@@ -51,7 +53,7 @@ const PostPage = () => {
 								</s.LightText>
 								<s.VrLine />
 								<s.LightText size={"lg"}>
-									{post.createdAt}
+									{post.createdAt && timeToString(post.createdAt)}
 								</s.LightText>
 								<s.VrLine />
 								<s.LightText size={"lg"}>▲ 0</s.LightText>

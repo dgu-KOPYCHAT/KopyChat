@@ -123,12 +123,12 @@ const TopBar = () => {
 							}
 						</c.LoginMenu>
 					</div>
-
+					{/*
 					<Link to="/user" style={{ textDecoration: "none" }}>
 						<c.TopMenu>
 							<s.BoldText size={"mdlg"}>마이페이지</s.BoldText>
 						</c.TopMenu>
-					</Link>
+						</Link>*/}
 				</c.RightSide>
 			</c.TopBar>
 			<s.HrLine />

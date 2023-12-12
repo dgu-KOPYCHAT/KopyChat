@@ -51,7 +51,7 @@ const PostPage = () => {
 								</s.LightText>
 								<s.VrLine />
 								<s.LightText size={"lg"}>
-									{timeToString(post.createdAt)}
+									{post.createdAt}
 								</s.LightText>
 								<s.VrLine />
 								<s.LightText size={"lg"}>▲ 0</s.LightText>

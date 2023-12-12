@@ -29,7 +29,7 @@ const BoardPage = () => {
 				id={item.id}
 				name={item.title}
 				writer={item.nickname}
-				createdDate={timeToString(Date(item.createdAt))}
+				createdDate={item.createdAt}
 			/>
 		));
 	}

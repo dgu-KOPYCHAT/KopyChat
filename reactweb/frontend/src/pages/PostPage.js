@@ -9,27 +9,30 @@ import ReactHtmlParser from "react-html-parser";
 
 const PostPage = () => {
 	const { id } = useParams();
-	const [post,setPost] = useState([]);
+	const [post, setPost] = useState([]);
 	useEffect(() => {
 		const fetchPost = async () => {
 			try {
-				axios.get(`http://localhost:8000/board/get/${id}`).then((res)=>{
-					setPost(res.data);
-				});
-			} catch(error) {
-				console.error('Error fetching data:', error);
+				axios
+					.get(`http://localhost:8000/board/get/${id}`)
+					.then((res) => {
+						setPost(res.data);
+					});
+			} catch (error) {
+				console.error("Error fetching data:", error);
 			}
 		};
 		fetchPost();
-	}, [])
-	const timeToString = () => new Intl.DateTimeFormat('ko-KR', {
-		hour: 'numeric', // 시간은 숫자로
-		minutes: 'numeric', // 분도 숫자로
-		day: 'numeric', // 날도 숫자로
-		month: 'long', // 달은 글자로
-		year: 'numeric', // 연도는 숫자로
-		weekday: 'long', // 요일은 글자로
-	  }).format();
+	}, []);
+	const timeToString = () =>
+		new Intl.DateTimeFormat("ko-KR", {
+			hour: "numeric", // 시간은 숫자로
+			minute: "numeric", // 분도 숫자로
+			day: "numeric", // 날도 숫자로
+			month: "long", // 달은 글자로
+			year: "numeric", // 연도는 숫자로
+			weekday: "long", // 요일은 글자로
+		}).format();
 	return (
 		<div>
 			<c.Entire>
@@ -38,10 +41,14 @@ const PostPage = () => {
 					<c.Content>
 						<c.PostTitleDiv>
 							<c.PostTitleTopDiv>
-								<s.BoldText size={"xl"}>{`제목: ${post.title}`}</s.BoldText>
+								<s.BoldText
+									size={"xl"}
+								>{`제목: ${post.title}`}</s.BoldText>
 							</c.PostTitleTopDiv>
 							<c.PostTitleBottomDiv>
-								<s.LightText size={"lg"}>{post.nickname}</s.LightText>
+								<s.LightText size={"lg"}>
+									{post.nickname}
+								</s.LightText>
 								<s.VrLine />
 								<s.LightText size={"lg"}>
 									{timeToString(post.createdAt)}

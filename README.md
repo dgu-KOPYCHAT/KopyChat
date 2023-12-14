@@ -1,7 +1,7 @@
 # KopyChat
 
 <center>
-2023 2학기 소프트웨어공학개론_02 기말 프로젝트
+2023 2학기 소프트웨어공학개론_01 기말 프로젝트
 
 <img src="https://github.com/dgu-KOPYCHAT/KopyChat/assets/121276581/d9ca323d-1a73-4d13-ac42-d4a134465ae8" width="150" />
 

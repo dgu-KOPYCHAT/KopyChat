@@ -1,11 +1,15 @@
 # KopyChat
 
+<center>
 2023 2학기 소프트웨어공학개론_02 기말 프로젝트
 
+<img src="https://github.com/dgu-KOPYCHAT/KopyChat/assets/121276581/d9ca323d-1a73-4d13-ac42-d4a134465ae8" width="150" />
+
 온라인 코딩 검사 및 협력 플랫폼 **KopyChat**
+</center>
 
 ## 팀원과 역할
-- 2019112034 장재혁 팀장    
+- 2019112034 장재혁 팀장
 `F&B 연동, frontend 최적화, backend 로직, 프레임워크 관리, 형상 관리, 회의록 관리`
 - 2018112376 전우진
 `mySQL 엔드포인트 배포, 시퀄라이즈 구현, API 설계, QA(리뷰)`
